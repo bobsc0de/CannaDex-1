@@ -64,6 +64,8 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.categL.text = index.category
         cell.categI.image = UIImage(named: index.categImage)
         cell.backgroundI.layer.cornerRadius = 12.0
+        print(index.categImage)
+        cell.backgroundI.image = UIImage(named: index.categImage)
         return cell
     }
 }
