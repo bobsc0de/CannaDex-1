@@ -66,7 +66,8 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.backgroundI.layer.cornerRadius = 12.0
         print(index.categImage)
         cell.backgroundI.image = UIImage(named: index.categImage + "_bg")
-        cell.categL.layer.cornerRadius = 20.0
+        cell.categL.layer.cornerRadius = 10.0
+        cell.categL.layer.masksToBounds = true
         return cell
     }
 }
