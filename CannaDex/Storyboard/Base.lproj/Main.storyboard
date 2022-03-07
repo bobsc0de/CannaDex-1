@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="-1542" y="938"/>
         </scene>
-        <!--Top 10-->
+        <!--Glossary-->
         <scene sceneID="i3m-OG-EZ7">
             <objects>
                 <viewController id="2Y2-my-Oxn" sceneMemberID="viewController">
@@ -159,7 +159,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Top 10" image="sun.max.fill" catalog="system" id="gWh-As-SmZ"/>
-                    <navigationItem key="navigationItem" id="k1B-gZ-rjN"/>
+                    <navigationItem key="navigationItem" title="Glossary" id="k1B-gZ-rjN">
+                        <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="Rlj-Oy-7F7"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykc-tX-aK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
