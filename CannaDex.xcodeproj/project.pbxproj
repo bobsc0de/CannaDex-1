@@ -16,6 +16,8 @@
 		2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8D727D6128C0007020D /* Top10CVC.swift */; };
 		2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8D927D61D1B0007020D /* GlossaryVC.swift */; };
 		2340A8DC27D61D2B0007020D /* GlossaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DB27D61D2B0007020D /* GlossaryTVC.swift */; };
+		2340A8DE27D620DE0007020D /* FilterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DD27D620DE0007020D /* FilterTVC.swift */; };
+		2340A8E027D620ED0007020D /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DF27D620ED0007020D /* FilterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2340A8D727D6128C0007020D /* Top10CVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top10CVC.swift; sourceTree = "<group>"; };
 		2340A8D927D61D1B0007020D /* GlossaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryVC.swift; sourceTree = "<group>"; };
 		2340A8DB27D61D2B0007020D /* GlossaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTVC.swift; sourceTree = "<group>"; };
+		2340A8DD27D620DE0007020D /* FilterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTVC.swift; sourceTree = "<group>"; };
+		2340A8DF27D620ED0007020D /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			children = (
 				2340A8C027D60C450007020D /* Top10VC.swift */,
 				2340A8D927D61D1B0007020D /* GlossaryVC.swift */,
+				2340A8DF27D620ED0007020D /* FilterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			children = (
 				2340A8D727D6128C0007020D /* Top10CVC.swift */,
 				2340A8DB27D61D2B0007020D /* GlossaryTVC.swift */,
+				2340A8DD27D620DE0007020D /* FilterTVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2340A8E027D620ED0007020D /* FilterVC.swift in Sources */,
+				2340A8DE27D620DE0007020D /* FilterTVC.swift in Sources */,
 				2340A8C127D60C450007020D /* Top10VC.swift in Sources */,
 				2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */,
 				2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */,
