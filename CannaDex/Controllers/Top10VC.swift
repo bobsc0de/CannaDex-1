@@ -14,6 +14,8 @@ class Top10VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionView()
+        
     }
 
 }
@@ -27,11 +29,13 @@ extension Top10VC:UICollectionViewDelegate,UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVC", for: indexPath) as! HomeCVC
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Top10CVC", for: indexPath) as! Top10CVC
+        
+        cell.imgI.layer.cornerRadius = 25.0
         
         return cell
     }
@@ -47,7 +51,7 @@ extension Top10VC:UICollectionViewDelegate,UICollectionViewDataSource {
 extension Top10VC:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionwidth = collectionView.bounds.width
-        return CGSize(width: collectionwidth/2 - 30, height: 150)
+        return CGSize(width: collectionwidth/2 - 25, height: 140)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

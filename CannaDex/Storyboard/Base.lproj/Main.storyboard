@@ -138,6 +138,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Vtc-CY-ijb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="compactAppearance"/>
                     </navigationBar>
                     <connections>
                         <segue destination="aNW-DB-vu1" kind="relationship" relationship="rootViewController" id="VaU-tm-h8w"/>
