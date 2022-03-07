@@ -103,5 +103,19 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         }
     }
     
+    private func saveFavorite(id:String) {
+        UserDefaults.standard.setValue(["1"], forKey: "saved")
+    }
+    
+    private func removeFavorite(id:String) {
+        let saved = UserDefaults.standard.array(forKey: "saved")
+        for i in 0..<saved!.count {
+            if saved[i] == id {
+                
+            }
+        }
+        
+    }
+    
     
 }
