@@ -23,10 +23,10 @@ class GlossaryVC: UIViewController {
         dataSource = SetupData.getGlossaryData()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        self.navigationController?.navigationBar.prefersLargeTitles = false
+//    }
     
     private func setupGesture(){
         filterI.isUserInteractionEnabled = true
