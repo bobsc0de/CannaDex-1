@@ -56,15 +56,71 @@
 		2340A8BB27D60C450007020D /* CannaDex */ = {
 			isa = PBXGroup;
 			children = (
-				2340A8BC27D60C450007020D /* AppDelegate.swift */,
-				2340A8BE27D60C450007020D /* SceneDelegate.swift */,
-				2340A8C027D60C450007020D /* ViewController.swift */,
-				2340A8C227D60C450007020D /* Main.storyboard */,
-				2340A8C527D60C470007020D /* Assets.xcassets */,
-				2340A8C727D60C470007020D /* LaunchScreen.storyboard */,
+				2340A8D627D60C820007020D /* Storyboard */,
+				2340A8D527D60C5C0007020D /* Classes */,
+				2340A8D427D60C590007020D /* Constant */,
+				2340A8D327D60C570007020D /* Views */,
+				2340A8D227D60C540007020D /* Controllers */,
+				2340A8D127D60C510007020D /* Models */,
+				2340A8D027D60C4E0007020D /* Supporting Files */,
 				2340A8CA27D60C470007020D /* Info.plist */,
 			);
 			path = CannaDex;
+			sourceTree = "<group>";
+		};
+		2340A8D027D60C4E0007020D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2340A8BC27D60C450007020D /* AppDelegate.swift */,
+				2340A8BE27D60C450007020D /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2340A8D127D60C510007020D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2340A8D227D60C540007020D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2340A8C027D60C450007020D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2340A8D327D60C570007020D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2340A8D427D60C590007020D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		2340A8D527D60C5C0007020D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2340A8D627D60C820007020D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2340A8C727D60C470007020D /* LaunchScreen.storyboard */,
+				2340A8C227D60C450007020D /* Main.storyboard */,
+				2340A8C527D60C470007020D /* Assets.xcassets */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
