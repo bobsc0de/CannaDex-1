@@ -70,4 +70,20 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.categL.layer.masksToBounds = true
         return cell
     }
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    
+    private func save(hex:String,name:String,category:String,rating:String,categImage:String,favorite:Bool){
+        let taylor = Glossary(hex: hex, name: name, category: category, rating: rating, categImage: categImage, favorite: favorite)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(taylor) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "SavedUser")
+        }
+    }
+    
+    
 }

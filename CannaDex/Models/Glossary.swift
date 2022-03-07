@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Glossary {
+struct Glossary:Codable{
     let hex:String
     let name:String
     let category:String
