@@ -50,6 +50,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlossaryTVC") as! GlossaryTVC
         cell.selectionStyle = .none
         cell.contentVieww.layer.cornerRadius = 15.0
+        cell.secondaryView.layer.cornerRadius = 15.0
         return cell
     }
 }
