@@ -151,7 +151,7 @@
         <!--Glossary-->
         <scene sceneID="i3m-OG-EZ7">
             <objects>
-                <viewController id="2Y2-my-Oxn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GlossaryVC" id="2Y2-my-Oxn" customClass="GlossaryVC" customModule="CannaDex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8KL-uf-Esm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="225" width="414" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="Rno-TH-VDR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryTVC" rowHeight="165" id="Rno-TH-VDR" customClass="GlossaryTVC" customModule="CannaDex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="165"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rno-TH-VDR" id="S4n-VE-d3r">
@@ -308,6 +308,11 @@
                     <navigationItem key="navigationItem" title="Glossary" id="k1B-gZ-rjN">
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="Rlj-Oy-7F7"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="filterI" destination="6SV-KV-gqx" id="ooH-3R-Hb8"/>
+                        <outlet property="searchT" destination="HGG-P9-goL" id="bEO-gR-B39"/>
+                        <outlet property="tableView" destination="cF8-Dt-ijT" id="Inc-hR-ahC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykc-tX-aK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 import UIKit
 
 class GlossaryTVC: UITableViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
