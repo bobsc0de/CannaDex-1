@@ -12,7 +12,7 @@
         <!--Favorites-->
         <scene sceneID="VIR-E9-W6G">
             <objects>
-                <viewController id="dXu-24-RFA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteVC" id="dXu-24-RFA" customClass="FavoriteVC" customModule="CannaDex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MKm-B3-IIR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,6 +160,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="0ge-WK-qPp"/>
                     <navigationItem key="navigationItem" title="Favorites" id="UV3-Dh-yK0"/>
+                    <connections>
+                        <outlet property="tableView" destination="rPm-eG-iEe" id="7vh-Fa-UgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YuW-Pq-1xE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
