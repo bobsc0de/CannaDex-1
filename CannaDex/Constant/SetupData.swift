@@ -16,4 +16,9 @@ class SetupData {
         dataSoure.append(Filter(name: "Hybrid", check: false))
         return dataSoure
     }
+    
+    public static func getGlossaryData() {
+        
+    }
+    
 }

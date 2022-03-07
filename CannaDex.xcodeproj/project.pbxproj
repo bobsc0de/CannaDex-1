@@ -20,6 +20,7 @@
 		2340A8E027D620ED0007020D /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DF27D620ED0007020D /* FilterVC.swift */; };
 		2340A8E227D6222D0007020D /* SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E127D6222D0007020D /* SetupData.swift */; };
 		2340A8E427D6234C0007020D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E327D6234C0007020D /* Filter.swift */; };
+		2340A8E627D6270D0007020D /* Glossary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E527D6270D0007020D /* Glossary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2340A8DF27D620ED0007020D /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2340A8E127D6222D0007020D /* SetupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupData.swift; sourceTree = "<group>"; };
 		2340A8E327D6234C0007020D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2340A8E527D6270D0007020D /* Glossary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glossary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2340A8E327D6234C0007020D /* Filter.swift */,
+				2340A8E527D6270D0007020D /* Glossary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */,
 				2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */,
 				2340A8E227D6222D0007020D /* SetupData.swift in Sources */,
+				2340A8E627D6270D0007020D /* Glossary.swift in Sources */,
 				2340A8BD27D60C450007020D /* AppDelegate.swift in Sources */,
 				2340A8BF27D60C450007020D /* SceneDelegate.swift in Sources */,
 				2340A8DC27D61D2B0007020D /* GlossaryTVC.swift in Sources */,
