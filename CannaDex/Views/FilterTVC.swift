@@ -8,6 +8,9 @@
 import UIKit
 
 class FilterTVC: UITableViewCell {
+    
+    @IBOutlet weak var filterName: UILabel!
+    @IBOutlet weak var checkBoxB: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +21,10 @@ class FilterTVC: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func checkBoxB(_ sender: Any) {
+        
     }
 
 }

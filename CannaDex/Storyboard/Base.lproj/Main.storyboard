@@ -322,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="-781.15942028985512" y="1656.6964285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--FilterVC-->
         <scene sceneID="0uE-Q9-Lo1">
             <objects>
-                <viewController id="YPH-zF-Yzo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterVC" id="YPH-zF-Yzo" customClass="FilterVC" customModule="CannaDex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UoM-6e-rnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +334,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="WLA-KP-eld">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterTVC" rowHeight="50" id="WLA-KP-eld" customClass="FilterTVC" customModule="CannaDex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WLA-KP-eld" id="RGB-hS-yZj">
@@ -359,6 +359,9 @@
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="checkBoxB:" destination="WLA-KP-eld" eventType="touchUpInside" id="hDP-wu-2yl"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -368,6 +371,10 @@
                                                 <constraint firstItem="Np5-ix-9d7" firstAttribute="leading" secondItem="RGB-hS-yZj" secondAttribute="leadingMargin" id="Zbo-wC-Jbw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkBoxB" destination="u6s-pC-qfH" id="ilx-dx-Xag"/>
+                                            <outlet property="filterName" destination="Np5-ix-9d7" id="K68-dV-Qbx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -381,6 +388,9 @@
                             <constraint firstItem="0bN-rW-CTZ" firstAttribute="top" secondItem="CF7-72-AqA" secondAttribute="top" id="wOZ-HL-MPA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="0bN-rW-CTZ" id="Uxf-3I-0WQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgx-XV-NtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

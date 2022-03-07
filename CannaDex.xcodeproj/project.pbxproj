@@ -18,6 +18,8 @@
 		2340A8DC27D61D2B0007020D /* GlossaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DB27D61D2B0007020D /* GlossaryTVC.swift */; };
 		2340A8DE27D620DE0007020D /* FilterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DD27D620DE0007020D /* FilterTVC.swift */; };
 		2340A8E027D620ED0007020D /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8DF27D620ED0007020D /* FilterVC.swift */; };
+		2340A8E227D6222D0007020D /* SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E127D6222D0007020D /* SetupData.swift */; };
+		2340A8E427D6234C0007020D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E327D6234C0007020D /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		2340A8DB27D61D2B0007020D /* GlossaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTVC.swift; sourceTree = "<group>"; };
 		2340A8DD27D620DE0007020D /* FilterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTVC.swift; sourceTree = "<group>"; };
 		2340A8DF27D620ED0007020D /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		2340A8E127D6222D0007020D /* SetupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupData.swift; sourceTree = "<group>"; };
+		2340A8E327D6234C0007020D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		2340A8D127D60C510007020D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2340A8E327D6234C0007020D /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 		2340A8D427D60C590007020D /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				2340A8E127D6222D0007020D /* SetupData.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -210,10 +216,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2340A8E027D620ED0007020D /* FilterVC.swift in Sources */,
+				2340A8E427D6234C0007020D /* Filter.swift in Sources */,
 				2340A8DE27D620DE0007020D /* FilterTVC.swift in Sources */,
 				2340A8C127D60C450007020D /* Top10VC.swift in Sources */,
 				2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */,
 				2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */,
+				2340A8E227D6222D0007020D /* SetupData.swift in Sources */,
 				2340A8BD27D60C450007020D /* AppDelegate.swift in Sources */,
 				2340A8BF27D60C450007020D /* SceneDelegate.swift in Sources */,
 				2340A8DC27D61D2B0007020D /* GlossaryTVC.swift in Sources */,
