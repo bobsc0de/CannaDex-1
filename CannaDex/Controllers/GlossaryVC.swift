@@ -79,9 +79,11 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
             if index.favorite {
                 cell.favoriteB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
                 self.dataSource[indexPath.row].favorite = false
+                self.saveFavorite(id: indexPath.row + 1)
             }else {
                 cell.favoriteB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
                 self.dataSource[indexPath.row].favorite = true
+                self.removeFavorite(id: indexPath.row + 1)
             }
         }
         
