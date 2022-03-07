@@ -167,21 +167,21 @@
                                 <rect key="frame" x="0.0" y="215" width="414" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryTVC" rowHeight="165" id="Rno-TH-VDR" customClass="GlossaryTVC" customModule="CannaDex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="165"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryTVC" rowHeight="150" id="Rno-TH-VDR" customClass="GlossaryTVC" customModule="CannaDex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rno-TH-VDR" id="S4n-VE-d3r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZA-Fw-sfj">
-                                                    <rect key="frame" x="20" y="21" width="374" height="123"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="128"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indica_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-pi-Llk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eN-Bu-cKe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqP-Sq-bWQ">
                                                                     <rect key="frame" x="10" y="15" width="50" height="12"/>
@@ -221,9 +221,12 @@
                                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="favoriteB:" destination="Rno-TH-VDR" eventType="touchUpInside" id="mG3-kv-EsW"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indica" translatesAutoresizingMaskIntoConstraints="NO" id="X7k-iK-S78">
-                                                                    <rect key="frame" x="264" y="68" width="100" height="40"/>
+                                                                    <rect key="frame" x="264" y="73" width="100" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="100" id="UV1-ia-IQo"/>
                                                                         <constraint firstAttribute="height" constant="40" id="ydq-1F-XaS"/>
@@ -271,15 +274,22 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="uZA-Fw-sfj" secondAttribute="bottom" constant="10" id="CCn-3I-Szu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uZA-Fw-sfj" secondAttribute="bottom" id="CCn-3I-Szu"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="uZA-Fw-sfj" secondAttribute="trailing" id="G5f-Vv-2VM"/>
                                                 <constraint firstItem="uZA-Fw-sfj" firstAttribute="leading" secondItem="S4n-VE-d3r" secondAttribute="leadingMargin" id="O6o-lZ-fH0"/>
-                                                <constraint firstItem="uZA-Fw-sfj" firstAttribute="top" secondItem="S4n-VE-d3r" secondAttribute="topMargin" constant="10" id="tzA-SS-edQ"/>
+                                                <constraint firstItem="uZA-Fw-sfj" firstAttribute="top" secondItem="S4n-VE-d3r" secondAttribute="topMargin" id="tzA-SS-edQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundI" destination="1Ap-pi-Llk" id="obT-3Y-aAD"/>
+                                            <outlet property="categI" destination="X7k-iK-S78" id="BY1-JO-JmC"/>
+                                            <outlet property="categL" destination="6Ta-2t-mm7" id="z4M-fM-X8O"/>
                                             <outlet property="contentVieww" destination="uZA-Fw-sfj" id="veR-HI-lRJ"/>
+                                            <outlet property="favoriteB" destination="LGf-ZA-mgL" id="MB1-HT-mVS"/>
+                                            <outlet property="hexL" destination="qqP-Sq-bWQ" id="73U-s0-01b"/>
+                                            <outlet property="ratingV" destination="IYJ-Nu-tm0" id="KHZ-HU-JBU"/>
                                             <outlet property="secondaryView" destination="6eN-Bu-cKe" id="yBe-5Q-jQC"/>
+                                            <outlet property="titleL" destination="79U-aK-4Je" id="TPo-VA-Gj3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

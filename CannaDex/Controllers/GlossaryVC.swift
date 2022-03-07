@@ -13,12 +13,14 @@ class GlossaryVC: UIViewController {
     @IBOutlet weak var searchT: UITextField!
     @IBOutlet weak var filterI: UIImageView!
     
+    var dataSource = [Glossary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         setupGesture()
+        dataSource = SetupData.getGlossaryData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -45,19 +47,23 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 165
+        tableView.rowHeight = 150
         tableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlossaryTVC") as! GlossaryTVC
         cell.selectionStyle = .none
-        cell.contentVieww.layer.cornerRadius = 15.0
-        cell.secondaryView.layer.cornerRadius = 15.0
+        let index = dataSource[indexPath.row]
+        cell.hexL.text = index.hex
+        cell.titleL.text = index.name
+        cell.categL.text = index.category
+        cell.categI.image = UIImage(named: index.categImage)
+        cell.backgroundI.layer.cornerRadius = 12.0
         return cell
     }
 }

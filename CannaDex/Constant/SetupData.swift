@@ -17,8 +17,12 @@ class SetupData {
         return dataSoure
     }
     
-    public static func getGlossaryData() {
-        
+    public static func getGlossaryData() ->[Glossary]{
+        var dataSoure = [Glossary]()
+        dataSoure.append(Glossary(hex: "#001", name: "White Widow", category: "Indica", rating: "4", categImage: "indica", favorite: false))
+        dataSoure.append(Glossary(hex: "#002", name: "Amnesia Haze", category: "Sativa", rating: "2", categImage: "sativa", favorite: false))
+        dataSoure.append(Glossary(hex: "#003", name: "Skunk 1 Auto", category: "Hybrid", rating: "5", categImage: "hybrid", favorite: false))
+        return dataSoure
     }
     
 }

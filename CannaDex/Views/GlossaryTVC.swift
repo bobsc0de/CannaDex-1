@@ -11,6 +11,13 @@ class GlossaryTVC: UITableViewCell {
     
     @IBOutlet weak var contentVieww: UIView!
     @IBOutlet weak var secondaryView: UIView!
+    @IBOutlet weak var hexL: UILabel!
+    @IBOutlet weak var titleL: UILabel!
+    @IBOutlet weak var categL: UILabel!
+    @IBOutlet weak var ratingV: UIView!
+    @IBOutlet weak var favoriteB: UIButton!
+    @IBOutlet weak var categI: UIImageView!
+    @IBOutlet weak var backgroundI: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +29,7 @@ class GlossaryTVC: UITableViewCell {
         
     }
 
+    @IBAction func favoriteB(_ sender: Any) {
+        
+    }
 }
