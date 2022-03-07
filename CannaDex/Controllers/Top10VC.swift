@@ -11,10 +11,13 @@ class Top10VC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var dataSource = [Top10]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+        dataSource = SetupData.getTop10Data()
         
     }
 
@@ -29,12 +32,14 @@ extension Top10VC:UICollectionViewDelegate,UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Top10CVC", for: indexPath) as! Top10CVC
-        
+        let index = dataSource[indexPath.row]
+        cell.imgI.image = UIImage(named: index.image)
+        cell.nameL.text = index.name
         cell.imgI.layer.cornerRadius = 25.0
         
         return cell

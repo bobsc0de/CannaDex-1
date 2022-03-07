@@ -25,4 +25,17 @@ class SetupData {
         return dataSoure
     }
     
+    public static func getTop10Data() ->[Top10]{
+        var dataSource = [Top10]()
+        dataSource.append(Top10(name: "Top 10 Indica", image: "budherd-team-Jx8pRS_j8kk-unsplash"))
+        dataSource.append(Top10(name: "Top 10 Sativa", image: "placeholder_sorts_image"))
+        dataSource.append(Top10(name: "Top 10 Ruderalis", image: "placeholder_sorts_image2)"))
+        return dataSource
+    }
+    
+}
+
+struct Top10 {
+    let name:String
+    let image:String
 }
