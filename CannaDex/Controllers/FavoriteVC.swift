@@ -25,11 +25,11 @@ class FavoriteVC: UIViewController {
         let data = UserDefaults.standard.array(forKey: "saved")
         for i in 0..<data!.count {
             if data![i] as! String == "1" {
-                dataSoure.append(Glossary(hex: "#001", name: "White Widow", category: "Indica", rating: "4", categImage: "indica", favorite: false))
+                dataSource.append(Glossary(hex: "#001", name: "White Widow", category: "Indica", rating: "4", categImage: "indica", favorite: false))
             }else if data![i] as! String == "2" {
-                dataSoure.append(Glossary(hex: "#002", name: "Amnesia Haze", category: "Sativa", rating: "2", categImage: "sativa", favorite: false))
+                dataSource.append(Glossary(hex: "#002", name: "Amnesia Haze", category: "Sativa", rating: "2", categImage: "sativa", favorite: false))
             }else if data![i] as! String == "3" {
-                dataSoure.append(Glossary(hex: "#003", name: "Skunk 1 Auto", category: "Hybrid", rating: "5", categImage: "hybrid", favorite: false))
+                dataSource.append(Glossary(hex: "#003", name: "Skunk 1 Auto", category: "Hybrid", rating: "5", categImage: "hybrid", favorite: false))
             }
         }
     }
