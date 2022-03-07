@@ -42,7 +42,6 @@ extension Top10VC:UICollectionViewDelegate,UICollectionViewDataSource {
         cell.nameL.text = index.name
         cell.imgI.layer.cornerRadius = 25.0
         cell.nameL.layer.cornerRadius = 10.0
-        
         return cell
     }
     
