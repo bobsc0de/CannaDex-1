@@ -70,29 +70,30 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.categL.layer.masksToBounds = true
         
         if index.favorite {
-            cell.favoriteB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }else {
-            cell.favoriteB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
         }
         
         cell.favorite = {
             if index.favorite {
-                cell.favoriteB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                //cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
                 self.dataSource[indexPath.row].favorite = false
-                self.saveFavorite(id: indexPath.row + 1)
+                self.tableView.reloadData()
+                self.removeFavorite(id: String(indexPath.row + 1))
             }else {
-                cell.favoriteB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                //cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                 self.dataSource[indexPath.row].favorite = true
-                self.removeFavorite(id: indexPath.row + 1)
+                self.tableView.reloadData()
+                self.saveFavorite(id: String(indexPath.row + 1))
             }
         }
-        
-        
         return cell
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print(UserDefaults.standard.array(forKey: "saved"))
+        print(dataSource)
     }
     
     
