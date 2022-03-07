@@ -16,7 +16,18 @@ class FilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
         dataSource = SetupData.getFilterData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 }
@@ -25,8 +36,6 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        //tableView.rowHeight = 165
-        tableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

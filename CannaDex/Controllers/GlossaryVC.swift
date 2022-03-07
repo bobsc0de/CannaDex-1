@@ -21,13 +21,20 @@ class GlossaryVC: UIViewController {
         setupGesture()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     private func setupGesture(){
         filterI.isUserInteractionEnabled = true
         filterI.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapFilter)))
     }
     
     @objc func tapFilter(){
-        print("Hello")
+        let controller = storyboard?.instantiateViewController(withIdentifier: "FilterVC") as! FilterVC
+        controller.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 
