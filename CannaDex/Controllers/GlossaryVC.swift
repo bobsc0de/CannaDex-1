@@ -21,6 +21,15 @@ class GlossaryVC: UIViewController {
         
     }
     
+    private func setupGesture(){
+        filterI.isUserInteractionEnabled = true
+        filterI.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapFilter)))
+    }
+    
+    @objc func tapFilter(){
+        print("Hello")
+    }
+    
 
 }
 
