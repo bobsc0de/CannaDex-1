@@ -68,12 +68,21 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.backgroundI.image = UIImage(named: index.categImage + "_bg")
         cell.categL.layer.cornerRadius = 10.0
         cell.categL.layer.masksToBounds = true
-        
+
         if index.favorite {
             cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }else {
             cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
         }
+        
+        let saved = UserDefaults.standard.array(forKey: "saved")
+        print(saved,"sami")
+//        for i in 0..<saved!.count {
+//
+//            if (saved![i] as! Int) - 1 == indexPath.row {
+//                cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//            }
+//        }
         
         cell.favorite = {
             if index.favorite {
