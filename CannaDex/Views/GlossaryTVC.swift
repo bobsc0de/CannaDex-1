@@ -9,6 +9,9 @@ import UIKit
 
 class GlossaryTVC: UITableViewCell {
     
+    @IBOutlet weak var contentVieww: UIView!
+    @IBOutlet weak var secondaryView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

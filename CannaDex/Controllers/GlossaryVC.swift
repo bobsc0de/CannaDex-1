@@ -18,7 +18,7 @@ class GlossaryVC: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        
+        setupGesture()
     }
     
     private func setupGesture(){
@@ -49,6 +49,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlossaryTVC") as! GlossaryTVC
         cell.selectionStyle = .none
+        cell.contentVieww.layer.cornerRadius = 15.0
         return cell
     }
 }

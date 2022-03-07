@@ -157,14 +157,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-KV-gqx">
-                                <rect key="frame" x="339" y="150" width="55" height="55"/>
+                                <rect key="frame" x="349" y="150" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="5WW-LS-Xik"/>
-                                    <constraint firstAttribute="width" constant="55" id="7LD-6a-Xk1"/>
+                                    <constraint firstAttribute="height" constant="45" id="5WW-LS-Xik"/>
+                                    <constraint firstAttribute="width" constant="45" id="7LD-6a-Xk1"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-Dt-ijT">
-                                <rect key="frame" x="0.0" y="225" width="414" height="588"/>
+                                <rect key="frame" x="0.0" y="215" width="414" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryTVC" rowHeight="165" id="Rno-TH-VDR" customClass="GlossaryTVC" customModule="CannaDex" customModuleProvider="target">
@@ -277,14 +277,18 @@
                                                 <constraint firstItem="uZA-Fw-sfj" firstAttribute="top" secondItem="S4n-VE-d3r" secondAttribute="topMargin" constant="10" id="tzA-SS-edQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentVieww" destination="uZA-Fw-sfj" id="veR-HI-lRJ"/>
+                                            <outlet property="secondaryView" destination="6eN-Bu-cKe" id="yBe-5Q-jQC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search terms here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGG-P9-goL">
-                                <rect key="frame" x="10" y="150" width="309" height="55"/>
+                                <rect key="frame" x="10" y="150" width="319" height="45"/>
                                 <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Z44-ey-Nvb"/>
+                                    <constraint firstAttribute="height" constant="45" id="Z44-ey-Nvb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
