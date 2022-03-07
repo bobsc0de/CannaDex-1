@@ -29,7 +29,7 @@
         <!--Unsere Top 10 Listen-->
         <scene sceneID="ban-w1-yP2">
             <objects>
-                <viewController id="aNW-DB-vu1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Top10VC" id="aNW-DB-vu1" customClass="Top10VC" customModule="CannaDex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYm-Yf-f3l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,9 @@
                     <navigationItem key="navigationItem" title="Unsere Top 10 Listen" id="bE2-RC-Ohn">
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="rmX-MN-X8h"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="MA0-JD-For" id="9y4-00-yxe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRJ-uf-Ra1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
