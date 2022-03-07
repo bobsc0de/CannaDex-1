@@ -13,6 +13,6 @@ struct Glossary:Codable{
     let category:String
     let rating:String
     let categImage:String
-    let favorite:Bool
+    var favorite:Bool
 }
 

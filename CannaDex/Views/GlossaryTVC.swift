@@ -19,6 +19,8 @@ class GlossaryTVC: UITableViewCell {
     @IBOutlet weak var categI: UIImageView!
     @IBOutlet weak var backgroundI: UIImageView!
     
+    var favorite : (() -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,6 +32,8 @@ class GlossaryTVC: UITableViewCell {
     }
 
     @IBAction func favoriteB(_ sender: Any) {
-        
+        if let btnAction = self.favorite {
+                    btnAction()
+        }
     }
 }

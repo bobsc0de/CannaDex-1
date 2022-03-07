@@ -68,6 +68,24 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.backgroundI.image = UIImage(named: index.categImage + "_bg")
         cell.categL.layer.cornerRadius = 10.0
         cell.categL.layer.masksToBounds = true
+        
+        if index.favorite {
+            cell.favoriteB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+        }else {
+            cell.favoriteB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        }
+        
+        cell.favorite = {
+            if index.favorite {
+                cell.favoriteB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                self.dataSource[indexPath.row].favorite = false
+            }else {
+                cell.favoriteB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                self.dataSource[indexPath.row].favorite = true
+            }
+        }
+        
+        
         return cell
     }
         
