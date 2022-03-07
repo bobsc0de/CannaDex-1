@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Top10: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
