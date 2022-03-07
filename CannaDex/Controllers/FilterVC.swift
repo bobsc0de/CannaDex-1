@@ -19,12 +19,6 @@ class FilterVC: UIViewController {
         dataSource = SetupData.getFilterData()
     }
     
-    private func insertData(){
-        
-    }
-    
-    
-    
 }
 extension FilterVC:UITableViewDelegate,UITableViewDataSource {
     
