@@ -118,6 +118,7 @@ class DetailGlossaryVC: UIViewController {
     
     @objc func userSwiped(){
         print("Down")
+        scrollView.isScrollEnabled = true
     }
     
 }
@@ -132,13 +133,13 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
 //        /print("hll")
         print(scrollView.contentOffset.y)
         if scrollView.contentOffset.y > 60 {
-            UIView.animate(withDuration: 0.2, delay: 0.5, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseOut, animations: {
                 self.imgI.alpha = 0
             }, completion: nil)
         }
         
         if scrollView.contentOffset.y < 55 {
-            UIView.animate(withDuration: 0.2, delay: 0.5, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
                 self.imgI.alpha = 1
             }, completion: nil)
         }
