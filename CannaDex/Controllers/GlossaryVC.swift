@@ -21,12 +21,13 @@ class GlossaryVC: UIViewController {
         setupTableView()
         setupGesture()
         dataSource = SetupData.getGlossaryData()
+        
     }
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        self.navigationController?.navigationBar.prefersLargeTitles = false
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
     
     private func setupGesture(){
         filterI.isUserInteractionEnabled = true
@@ -64,36 +65,50 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.categL.text = index.category
         cell.categI.image = UIImage(named: index.categImage)
         cell.backgroundI.layer.cornerRadius = 12.0
-        print(index.categImage)
         cell.backgroundI.image = UIImage(named: index.categImage + "_bg")
         cell.categL.layer.cornerRadius = 10.0
         cell.categL.layer.masksToBounds = true
-
-        if index.favorite {
-            cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        
+        
+//        if cell.favoriteB.imageView?.image == UIImage(systemName: "heart.fill") {
+//            self.dataSource[indexPath.row].favorite = true
+//        }else {
+//            self.dataSource[indexPath.row].favorite = false
+//        }
+        
+        let saved = UserDefaults.standard.stringArray(forKey: "saved")
+        print(saved,"sami")
+        if saved == nil {
+            
         }else {
-            cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+            if saved!.contains(where: {$0 == "\(indexPath.row + 1)"}) {
+               // it exists, do something
+                cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            } else {
+               //item could not be found
+                cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+            
+//            for i in 0..<saved!.count {
+//                if Int(saved![i]) == indexPath.row + 1 {
+//                    cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//                }else {
+//                    cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+//                }
+//            }
         }
         
-        let saved = UserDefaults.standard.array(forKey: "saved")
-        print(saved,"sami")
-//        for i in 0..<saved!.count {
-//
-//            if (saved![i] as! Int) - 1 == indexPath.row {
-//                cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-//            }
-//        }
         
         cell.favorite = {
             if index.favorite {
-                //cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+                cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
                 self.dataSource[indexPath.row].favorite = false
-                self.tableView.reloadData()
+                //self.tableView.reloadData()
                 self.removeFavorite(id: String(indexPath.row + 1))
             }else {
-                //cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                self.dataSource[indexPath.row].favorite = true
-                self.tableView.reloadData()
+                cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                //self.dataSource[indexPath.row].favorite = true
+                print("In CLick ",UserDefaults.standard.stringArray(forKey: "saved"))
                 self.saveFavorite(id: String(indexPath.row + 1))
             }
         }
@@ -101,34 +116,38 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(UserDefaults.standard.array(forKey: "saved"))
-        print(dataSource)
+        print(UserDefaults.standard.stringArray(forKey: "saved"))
     }
     
-    
-    private func save(hex:String,name:String,category:String,rating:String,categImage:String,favorite:Bool){
-        let taylor = Glossary(hex: hex, name: name, category: category, rating: rating, categImage: categImage, favorite: favorite)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(taylor) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "SavedUser")
-        }
-    }
     
     private func saveFavorite(id:String) {
+        var savedFormer = UserDefaults.standard.stringArray(forKey: "saved")
         var saved = [String]()
-        saved.append(id)
-        UserDefaults.standard.setValue(saved, forKey: "saved")
+        if savedFormer == nil {
+            saved.append(id)
+            UserDefaults.standard.setValue(saved, forKey: "saved")
+        }else {
+            savedFormer?.append(id)
+            UserDefaults.standard.setValue(savedFormer, forKey: "saved")
+        }
+        print(saved,"Saved")
+        print(savedFormer,"savedFormer")
+        
     }
     
     private func removeFavorite(id:String) {
-        var saved = UserDefaults.standard.array(forKey: "saved")
-        for i in 0..<saved!.count {
-            if saved![i] as! String == id {
-                saved?.remove(at: i)
+        var saved = UserDefaults.standard.stringArray(forKey: "saved")
+        if saved == nil {
+            
+        }else {
+            for i in 0..<saved!.count {
+                if saved![i] == id {
+                    saved?.remove(at: i)
+                }
             }
+            UserDefaults.standard.setValue(saved, forKey: "saved")
         }
-        UserDefaults.standard.setValue(saved, forKey: "saved")
+        
     }
     
     

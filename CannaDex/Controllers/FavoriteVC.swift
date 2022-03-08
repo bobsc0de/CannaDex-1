@@ -21,15 +21,25 @@ class FavoriteVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+    }
+    
     private func getData(){
-        let data = UserDefaults.standard.array(forKey: "saved")
-        for i in 0..<data!.count {
-            if data![i] as! String == "1" {
-                dataSource.append(Glossary(hex: "#001", name: "White Widow", category: "Indica", rating: "4", categImage: "indica", favorite: false))
-            }else if data![i] as! String == "2" {
-                dataSource.append(Glossary(hex: "#002", name: "Amnesia Haze", category: "Sativa", rating: "2", categImage: "sativa", favorite: false))
-            }else if data![i] as! String == "3" {
-                dataSource.append(Glossary(hex: "#003", name: "Skunk 1 Auto", category: "Hybrid", rating: "5", categImage: "hybrid", favorite: false))
+        self.dataSource = [String]()
+        let data = UserDefaults.standard.stringArray(forKey: "saved")
+        if data == nil {
+            
+        }else {
+            for i in 0..<data!.count {
+                if data![i] == "1" {
+                    dataSource.append(Glossary(hex: "#001", name: "White Widow", category: "Indica", rating: "4", categImage: "indica", favorite: false))
+                }else if data![i] == "2" {
+                    dataSource.append(Glossary(hex: "#002", name: "Amnesia Haze", category: "Sativa", rating: "2", categImage: "sativa", favorite: false))
+                }else if data![i] == "3" {
+                    dataSource.append(Glossary(hex: "#003", name: "Skunk 1 Auto", category: "Hybrid", rating: "5", categImage: "hybrid", favorite: false))
+                }
             }
         }
     }
