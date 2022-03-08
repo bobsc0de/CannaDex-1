@@ -58,7 +58,7 @@ class DetailGlossaryVC: UIViewController {
     
     private func showView(button:String) {
         if button == "de"{
-            descriptionB.layer.cornerRadius = descriptionB.frame.width / 2
+            descriptionB.layer.cornerRadius = descriptionB.frame.height / 2
             descriptionB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             descriptionB.setTitleColor(.white, for: .normal)
             referencesB.backgroundColor = .clear
@@ -66,7 +66,7 @@ class DetailGlossaryVC: UIViewController {
             dateB.backgroundColor = .clear
             dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         }else if button == "re" {
-            referencesB.layer.cornerRadius = referencesB.frame.width / 2
+            referencesB.layer.cornerRadius = referencesB.frame.height / 2
             referencesB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             referencesB.setTitleColor(.white, for: .normal)
             descriptionB.backgroundColor = .clear
@@ -74,9 +74,8 @@ class DetailGlossaryVC: UIViewController {
             dateB.backgroundColor = .clear
             dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         }else if button == "da" {
-            dateB.layer.cornerRadius = dateB.frame.width / 2
+            dateB.layer.cornerRadius = dateB.frame.height / 2
             dateB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
-            //dateB.tintColor = UIColor.white
             dateB.setTitleColor(.white, for: .normal)
             descriptionB.backgroundColor = .clear
             descriptionB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
@@ -92,21 +91,21 @@ class DetailGlossaryVC: UIViewController {
     @IBAction func descriptionB(_ sender: Any) {
         showView(button: "de")
         textT.text = "Descri"
-        descriptionB.setTitleColor(UIColor.white, for: .normal)
-        descriptionB.tintColor = .white
+//        descriptionB.setTitleColor(UIColor.white, for: .normal)
+//        descriptionB.tintColor = .white
     }
     
     @IBAction func referencesB(_ sender: Any) {
         showView(button: "re")
         textT.text = "REfere"
-        referencesB.setTitleColor(UIColor.white, for: .normal)
-        referencesB.tintColor = .white
+//        referencesB.setTitleColor(UIColor.white, for: .normal)
+//        referencesB.tintColor = .white
     }
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
         textT.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
-        dateB.setTitleColor(UIColor.white, for: .normal)
+        //dateB.setTitleColor(UIColor.white, for: .normal)
     }
     
     private func setupGesture(){
