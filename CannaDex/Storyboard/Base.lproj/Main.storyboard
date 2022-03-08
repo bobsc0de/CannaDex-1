@@ -548,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="-1322" y="2394"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail GlossaryVC-->
         <scene sceneID="bJZ-qq-xsh">
             <objects>
-                <viewController id="e2N-Sl-86h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailGlossaryVC" id="e2N-Sl-86h" customClass="DetailGlossaryVC" customModule="CannaDex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FpL-Bi-GY5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,6 +592,9 @@
                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="favoriteB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="KWZ-Hc-cdo"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7y-Wn-apo">
                                                         <rect key="frame" x="147" y="182" width="120" height="25"/>
@@ -615,6 +618,9 @@
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="descriptionB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="TQ1-er-QkW"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiQ-4I-Ggv">
                                                                 <rect key="frame" x="131.5" y="0.0" width="111" height="35"/>
@@ -623,6 +629,9 @@
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                                     <color key="baseForegroundColor" red="0.39215683940000001" green="0.76862752440000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="dateB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="1pY-hb-F7t"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-dK-LbG">
                                                                 <rect key="frame" x="262.5" y="0.0" width="111.5" height="35"/>
@@ -631,6 +640,9 @@
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                                     <color key="baseForegroundColor" red="0.39215683940000001" green="0.76862752440000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="referencesB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="a9w-ZY-6Fh"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -694,6 +706,17 @@
                             <constraint firstItem="UGP-jT-goU" firstAttribute="leading" secondItem="gMh-z9-Fs9" secondAttribute="leading" id="nh8-Tq-Ern"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categL" destination="r7y-Wn-apo" id="f3m-2s-eJh"/>
+                        <outlet property="contentView" destination="IgE-jM-8Wd" id="jOP-ny-G5Z"/>
+                        <outlet property="dateB" destination="MiQ-4I-Ggv" id="iYs-Lw-cC9"/>
+                        <outlet property="descriptionB" destination="bHc-Fo-Fu5" id="6YM-6x-33A"/>
+                        <outlet property="favoriteB" destination="xAN-ai-E1w" id="m88-BK-tb2"/>
+                        <outlet property="nameL" destination="3Tr-Ux-3Qq" id="WXZ-sh-VOd"/>
+                        <outlet property="referencesB" destination="ix8-dK-LbG" id="lHp-Ui-jbD"/>
+                        <outlet property="scrollView" destination="UGP-jT-goU" id="rwW-19-H9J"/>
+                        <outlet property="textT" destination="fbh-nu-NPs" id="UsF-Db-FaR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suf-kV-tbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
