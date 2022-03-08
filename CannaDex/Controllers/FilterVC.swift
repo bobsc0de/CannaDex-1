@@ -47,6 +47,13 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.filterName.text = dataSource[indexPath.row].name
         
+        cell.check = {
+            if dataSource[indexPath.row].check {
+                
+            }
+        }
+        
+        
         return cell
     }
 }
