@@ -299,14 +299,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="35" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-KV-gqx">
-                                <rect key="frame" x="349" y="153" width="45" height="35"/>
+                                <rect key="frame" x="349" y="143" width="45" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="5WW-LS-Xik"/>
                                     <constraint firstAttribute="width" constant="45" id="7LD-6a-Xk1"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-Dt-ijT">
-                                <rect key="frame" x="0.0" y="215" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="185" width="414" height="628"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryTVC" rowHeight="150" id="Rno-TH-VDR" customClass="GlossaryTVC" customModule="CannaDex" customModuleProvider="target">
@@ -437,7 +437,7 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search terms here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGG-P9-goL">
-                                <rect key="frame" x="20" y="150" width="319" height="45"/>
+                                <rect key="frame" x="20" y="140" width="319" height="45"/>
                                 <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Z44-ey-Nvb"/>
@@ -449,13 +449,13 @@
                         <viewLayoutGuide key="safeArea" id="72F-Rp-BH7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cF8-Dt-ijT" firstAttribute="top" secondItem="HGG-P9-goL" secondAttribute="bottom" constant="20" id="3Nm-XF-dwR"/>
-                            <constraint firstItem="HGG-P9-goL" firstAttribute="top" secondItem="72F-Rp-BH7" secondAttribute="top" constant="10" id="Gth-MS-5xP"/>
+                            <constraint firstItem="cF8-Dt-ijT" firstAttribute="top" secondItem="HGG-P9-goL" secondAttribute="bottom" id="3Nm-XF-dwR"/>
+                            <constraint firstItem="HGG-P9-goL" firstAttribute="top" secondItem="72F-Rp-BH7" secondAttribute="top" id="Gth-MS-5xP"/>
                             <constraint firstItem="72F-Rp-BH7" firstAttribute="trailing" secondItem="6SV-KV-gqx" secondAttribute="trailing" constant="20" id="Lgx-Do-dPB"/>
                             <constraint firstItem="72F-Rp-BH7" firstAttribute="trailing" secondItem="cF8-Dt-ijT" secondAttribute="trailing" id="QQJ-ej-tZB"/>
                             <constraint firstItem="72F-Rp-BH7" firstAttribute="bottom" secondItem="cF8-Dt-ijT" secondAttribute="bottom" id="WgD-AB-4vl"/>
                             <constraint firstItem="HGG-P9-goL" firstAttribute="leading" secondItem="72F-Rp-BH7" secondAttribute="leading" constant="20" id="drw-ZX-JdH"/>
-                            <constraint firstItem="6SV-KV-gqx" firstAttribute="top" secondItem="72F-Rp-BH7" secondAttribute="top" constant="13" id="mCY-p5-Sav"/>
+                            <constraint firstItem="6SV-KV-gqx" firstAttribute="top" secondItem="72F-Rp-BH7" secondAttribute="top" constant="3" id="mCY-p5-Sav"/>
                             <constraint firstItem="cF8-Dt-ijT" firstAttribute="leading" secondItem="72F-Rp-BH7" secondAttribute="leading" id="t54-g1-yLd"/>
                             <constraint firstItem="6SV-KV-gqx" firstAttribute="leading" secondItem="HGG-P9-goL" secondAttribute="trailing" constant="10" id="uRI-a3-MCs"/>
                         </constraints>
