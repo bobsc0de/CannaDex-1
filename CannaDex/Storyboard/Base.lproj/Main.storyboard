@@ -613,7 +613,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Date">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                                                    <color key="baseForegroundColor" red="0.39215683940000001" green="0.76862752440000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="dateB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="1pY-hb-F7t"/>
@@ -624,7 +624,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="References">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                                                    <color key="baseForegroundColor" red="0.39215683940000001" green="0.76862752440000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="referencesB:" destination="e2N-Sl-86h" eventType="touchUpInside" id="a9w-ZY-6Fh"/>

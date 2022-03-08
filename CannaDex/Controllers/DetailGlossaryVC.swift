@@ -31,17 +31,14 @@ class DetailGlossaryVC: UIViewController {
         showView(button: "de")
         textT.text = "Descri"
         descriptionB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
+        dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
+        referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         referencesB.backgroundColor = .clear
         dateB.backgroundColor = .clear
         descriptionB.titleLabel?.textColor = UIColor.white
         setupGesture()
         setupScrollView()
         
-//        DispatchQueue.main.async {
-//            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
-//                self.scrollView.contentOffset.x = CGFloat(self.startingPointForView)
-//            }, completion: nil)
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,7 +73,7 @@ class DetailGlossaryVC: UIViewController {
         }else if button == "da" {
             dateB.layer.cornerRadius = dateB.frame.height / 2
             dateB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
-            dateB.setTitleColor(.white, for: .normal)
+            dateB.titleLabel?.textColor = .white
             descriptionB.backgroundColor = .clear
             descriptionB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
@@ -91,15 +88,11 @@ class DetailGlossaryVC: UIViewController {
     @IBAction func descriptionB(_ sender: Any) {
         showView(button: "de")
         textT.text = "Descri"
-//        descriptionB.setTitleColor(UIColor.white, for: .normal)
-//        descriptionB.tintColor = .white
     }
     
     @IBAction func referencesB(_ sender: Any) {
         showView(button: "re")
         textT.text = "REfere"
-//        referencesB.setTitleColor(UIColor.white, for: .normal)
-//        referencesB.tintColor = .white
     }
     
     @IBAction func dateB(_ sender: Any) {
