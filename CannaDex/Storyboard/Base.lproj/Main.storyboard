@@ -58,9 +58,9 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrr-e3-jn8">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrr-e3-jn8" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="10" y="86" width="140" height="25"/>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="140" id="HOF-nU-m3x"/>
                                                                         <constraint firstAttribute="height" constant="25" id="gfE-01-cbt"/>
@@ -260,7 +260,7 @@
                             <constraint firstItem="MA0-JD-For" firstAttribute="top" secondItem="27Z-3f-nSt" secondAttribute="bottom" constant="10" id="ssT-fc-2So"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Blog" image="book.fill" catalog="system" id="sMG-c2-gOp"/>
+                    <tabBarItem key="tabBarItem" title="Top 10" image="seal.fill" catalog="system" id="sMG-c2-gOp"/>
                     <navigationItem key="navigationItem" title="Unsere Top 10 Listen" id="bE2-RC-Ohn">
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="rmX-MN-X8h"/>
                     </navigationItem>
@@ -346,9 +346,9 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYJ-Nu-tm0">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYJ-Nu-tm0" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="10" y="86" width="140" height="25"/>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="140" id="chm-1L-TG9"/>
                                                                         <constraint firstAttribute="height" constant="25" id="s5j-rk-Wig"/>
@@ -460,7 +460,7 @@
                             <constraint firstItem="6SV-KV-gqx" firstAttribute="leading" secondItem="HGG-P9-goL" secondAttribute="trailing" constant="10" id="uRI-a3-MCs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Top 10" image="sun.max.fill" catalog="system" id="gWh-As-SmZ"/>
+                    <tabBarItem key="tabBarItem" title="Glossary" image="leaf.fill" catalog="system" id="gWh-As-SmZ"/>
                     <navigationItem key="navigationItem" title="Glossary" id="k1B-gZ-rjN">
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="Rlj-Oy-7F7"/>
                     </navigationItem>
@@ -743,7 +743,7 @@
             </objects>
             <point key="canvasLocation" x="-390" y="263"/>
         </scene>
-        <!--Glossary-->
+        <!--Blog-->
         <scene sceneID="PV7-EL-J6T">
             <objects>
                 <viewController id="o1b-ig-8tI" sceneMemberID="viewController">
@@ -753,7 +753,7 @@
                         <viewLayoutGuide key="safeArea" id="KBw-fk-GoF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Glossary" image="leaf.fill" catalog="system" id="36a-py-Pbl"/>
+                    <tabBarItem key="tabBarItem" title="Blog" image="book.fill" catalog="system" id="36a-py-Pbl"/>
                     <navigationItem key="navigationItem" id="foB-7V-Z88"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MV3-ZF-CAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -824,7 +824,7 @@
         <image name="leaf.fill" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="placeholder_sorts_image" width="3000" height="2000"/>
-        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+        <image name="seal.fill" catalog="system" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

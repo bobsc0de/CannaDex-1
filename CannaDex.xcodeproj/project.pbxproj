@@ -23,6 +23,7 @@
 		2340A8E627D6270D0007020D /* Glossary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E527D6270D0007020D /* Glossary.swift */; };
 		2340A8E827D63AE30007020D /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E727D63AE30007020D /* FavoriteVC.swift */; };
 		2340A8EA27D761920007020D /* DetailGlossaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E927D761920007020D /* DetailGlossaryVC.swift */; };
+		2340A8ED27D770E90007020D /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 2340A8EC27D770E90007020D /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2340A8ED27D770E90007020D /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +171,9 @@
 			dependencies = (
 			);
 			name = CannaDex;
+			packageProductDependencies = (
+				2340A8EC27D770E90007020D /* Cosmos */,
+			);
 			productName = CannaDex;
 			productReference = 2340A8B927D60C450007020D /* CannaDex.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 2340A8B027D60C450007020D;
+			packageReferences = (
+				2340A8EB27D770E90007020D /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 2340A8BA27D60C450007020D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2340A8EB27D770E90007020D /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2340A8EC27D770E90007020D /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2340A8EB27D770E90007020D /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2340A8B127D60C450007020D /* Project object */;
 }
