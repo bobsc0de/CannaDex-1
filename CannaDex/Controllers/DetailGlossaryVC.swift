@@ -49,14 +49,14 @@ class DetailGlossaryVC: UIViewController {
     }
     
     @IBAction func descriptionB(_ sender: Any) {
-        
+        showView(button: "de")
     }
     
     @IBAction func referencesB(_ sender: Any) {
-        
+        showView(button: "re")
     }
     
     @IBAction func dateB(_ sender: Any) {
-        
+        showView(button: "da")
     }
 }
