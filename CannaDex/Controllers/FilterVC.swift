@@ -47,8 +47,21 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.filterName.text = dataSource[indexPath.row].name
         
-        cell.check = {
+        let saved = UserDefaults.standard.stringArray(forKey: "filter")
+        //print(saved,"sami")
+        if saved == nil {
             
+        }else {
+            if saved!.contains(where: {$0 == self.dataSource[indexPath.row].name}) {
+               // it exists, do something
+                cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+            } else {
+               //item could not be found
+                cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+        }
+        
+        cell.check = {
             let saved = UserDefaults.standard.stringArray(forKey: "filter")
             if saved == nil {
                 if self.dataSource[indexPath.row].check {
@@ -56,7 +69,7 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
                     self.dataSource[indexPath.row].check = false
                     self.removeFavorite(id: self.dataSource[indexPath.row].name)
                 }else {
-                    cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+                    cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
                     self.dataSource[indexPath.row].check = true
                     self.saveFavorite(id: self.dataSource[indexPath.row].name)
                 }
@@ -66,18 +79,11 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
                     self.dataSource[indexPath.row].check = false
                     self.removeFavorite(id: self.dataSource[indexPath.row].name)
                 }else {
-                    cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+                    cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
                     self.dataSource[indexPath.row].check = true
                     self.saveFavorite(id: self.dataSource[indexPath.row].name)
                 }
             }
-            
-//            if self.dataSource[indexPath.row].check {
-//                cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
-//
-//            }else {
-//                cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
-//            }
         }
         return cell
     }
