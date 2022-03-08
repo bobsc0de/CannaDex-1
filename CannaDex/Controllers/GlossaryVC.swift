@@ -111,26 +111,27 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         
         cell.favorite = {
             print(index.favorite)
-            
-//            if index.favorite {
-//                index.favorite = false
-//            }else {
-//                index.favorite = true
-//            }
-                    
-            if index.favorite {
-                cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
-//                self.dataSource[indexPath.row].favorite = false
-                index.favorite = false
-                //self.tableView.reloadData()
-                self.removeFavorite(id: String(indexPath.row + 1))
+            let saved = UserDefaults.standard.stringArray(forKey: "saved")
+            if saved == nil {
+                if index.favorite {
+                    cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+                    self.dataSource[indexPath.row].favorite = false
+    //                index.favorite = false
+    //                self.tableView.reloadData()
+                    self.removeFavorite(id: String(indexPath.row + 1))
+                }else {
+                    cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    self.dataSource[indexPath.row].favorite = true
+                    //index.favorite = true
+                    print("In CLick ",UserDefaults.standard.stringArray(forKey: "saved"))
+                    self.saveFavorite(id: String(indexPath.row + 1))
+                }
             }else {
-                cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                //self.dataSource[indexPath.row].favorite = true
-                index.favorite = true
-                print("In CLick ",UserDefaults.standard.stringArray(forKey: "saved"))
-                self.saveFavorite(id: String(indexPath.row + 1))
+                if saved!.contains(where: {$0 == id}) {
+                    
+                }
             }
+            
         }
         return cell
     }
@@ -147,8 +148,12 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
             saved.append(id)
             UserDefaults.standard.setValue(saved, forKey: "saved")
         }else {
-            savedFormer?.append(id)
-            UserDefaults.standard.setValue(savedFormer, forKey: "saved")
+            if savedFormer!.contains(where: {$0 == id}) {
+                
+            }else {
+                savedFormer?.append(id)
+                UserDefaults.standard.setValue(savedFormer, forKey: "saved")
+            }
         }
         print(saved,"Saved")
         print(savedFormer,"savedFormer")
