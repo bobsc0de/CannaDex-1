@@ -556,7 +556,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-jT-goU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-jT-goU">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-jM-8Wd">
@@ -763,6 +763,7 @@
                         <outlet property="dateB" destination="MiQ-4I-Ggv" id="iYs-Lw-cC9"/>
                         <outlet property="descriptionB" destination="bHc-Fo-Fu5" id="6YM-6x-33A"/>
                         <outlet property="favoriteB" destination="xAN-ai-E1w" id="m88-BK-tb2"/>
+                        <outlet property="imgI" destination="mu3-OI-j3y" id="c9g-t1-8fg"/>
                         <outlet property="nameL" destination="3Tr-Ux-3Qq" id="WXZ-sh-VOd"/>
                         <outlet property="referencesB" destination="ix8-dK-LbG" id="lHp-Ui-jbD"/>
                         <outlet property="scrollView" destination="UGP-jT-goU" id="rwW-19-H9J"/>

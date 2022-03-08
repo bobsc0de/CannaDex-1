@@ -11,6 +11,7 @@ class DetailGlossaryVC: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var imgI: UIImageView!
     @IBOutlet weak var nameL: UILabel!
     @IBOutlet weak var categL: UILabel!
     @IBOutlet weak var favoriteB: UIButton!
@@ -19,6 +20,9 @@ class DetailGlossaryVC: UIViewController {
     @IBOutlet weak var referencesB: UIButton!
     @IBOutlet weak var textT: UITextView!
     @IBOutlet weak var secondaryView: UIView!
+    
+    
+    var startingPointForView = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,14 @@ class DetailGlossaryVC: UIViewController {
         referencesB.backgroundColor = .clear
         dateB.backgroundColor = .clear
         descriptionB.titleLabel?.textColor = UIColor.white
+        setupGesture()
+        setupScrollView()
+        
+//        DispatchQueue.main.async {
+//            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+//                self.scrollView.contentOffset.x = CGFloat(self.startingPointForView)
+//            }, completion: nil)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,8 +50,10 @@ class DetailGlossaryVC: UIViewController {
     }
     
     private func setupDesign(){
-        secondaryView.layer.cornerRadius = 20
-        secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        secondaryView.layer.cornerRadius = 40
+        //secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner] for bottom radius
+        secondaryView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // for top radius
+        
     }
     
     private func showView(button:String) {
@@ -94,4 +108,49 @@ class DetailGlossaryVC: UIViewController {
         textT.text = "Date"
         dateB.setTitleColor(UIColor.white, for: .normal)
     }
+    
+    private func setupGesture(){
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(userSwiped))
+        swipeRecognizer.numberOfTouchesRequired = 1
+        swipeRecognizer.direction = .down
+        contentView.addGestureRecognizer(swipeRecognizer)
+    }
+    
+    @objc func userSwiped(){
+        print("Down")
+    }
+    
+}
+
+extension DetailGlossaryVC:UIScrollViewDelegate {
+    
+    private func setupScrollView(){
+        scrollView.delegate = self
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        /print("hll")
+        print(scrollView.contentOffset.y)
+        if scrollView.contentOffset.y > 60 {
+            UIView.animate(withDuration: 0.2, delay: 0.5, options: .curveEaseOut, animations: {
+                self.imgI.alpha = 0
+            }, completion: nil)
+        }
+        
+        if scrollView.contentOffset.y < 55 {
+            UIView.animate(withDuration: 0.2, delay: 0.5, options: .curveEaseIn, animations: {
+                self.imgI.alpha = 1
+            }, completion: nil)
+        }
+        
+        if scrollView.contentOffset.y > 96 {
+            scrollView.isScrollEnabled = false
+        }
+        
+        if scrollView.contentOffset.y < 90 {
+            scrollView.isScrollEnabled = true
+        }
+        
+    }
+    
 }
