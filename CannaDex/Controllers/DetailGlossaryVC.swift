@@ -105,7 +105,7 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
-        textT.text = "Date"
+        textT.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
         dateB.setTitleColor(UIColor.white, for: .normal)
     }
     
@@ -114,6 +114,12 @@ class DetailGlossaryVC: UIViewController {
         swipeRecognizer.numberOfTouchesRequired = 1
         swipeRecognizer.direction = .down
         contentView.addGestureRecognizer(swipeRecognizer)
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapContentView)))
+    }
+    
+    @objc func tapContentView(){
+        print("Tap")
+        scrollView.isScrollEnabled = true
     }
     
     @objc func userSwiped(){
