@@ -18,7 +18,7 @@ class Top10VC: UIViewController {
         
         setupCollectionView()
         dataSource = SetupData.getTop10Data()
-        //UserDefaults.standard.removeObject(forKey: "saved")
+//        UserDefaults.standard.removeObject(forKey: "saved")
         
     }
 

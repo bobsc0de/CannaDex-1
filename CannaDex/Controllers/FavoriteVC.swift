@@ -24,11 +24,13 @@ class FavoriteVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
+        self.tableView.reloadData()
     }
     
     private func getData(){
-        self.dataSource = [String]()
+        self.dataSource = [Glossary]()
         let data = UserDefaults.standard.stringArray(forKey: "saved")
+        print(data)
         if data == nil {
             
         }else {
