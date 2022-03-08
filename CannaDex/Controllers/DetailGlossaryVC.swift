@@ -24,9 +24,13 @@ class DetailGlossaryVC: UIViewController {
         super.viewDidLoad()
         
         setupDesign()
+        showView(button: "de")
+        textT.text = "Descri"
+        descriptionB.titleLabel?.textColor = UIColor.white
     }
     
     private func setupDesign(){
+        secondaryView.layer.cornerRadius = 20
         secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
@@ -34,17 +38,26 @@ class DetailGlossaryVC: UIViewController {
         if button == "de"{
             descriptionB.layer.cornerRadius = 12.0
             descriptionB.backgroundColor = .green
+            descriptionB.titleLabel?.textColor = UIColor.white
             referencesB.backgroundColor = .clear
+            referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             dateB.backgroundColor = .clear
+            dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         }else if button == "re" {
             referencesB.layer.cornerRadius = 12.0
             referencesB.backgroundColor = .green
+            referencesB.titleLabel?.textColor = UIColor.white
             descriptionB.backgroundColor = .clear
+            descriptionB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             dateB.backgroundColor = .clear
+            dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         }else if button == "da" {
             dateB.layer.cornerRadius = 12.0
             dateB.backgroundColor = .green
+            dateB.titleLabel?.textColor = UIColor.white
             descriptionB.backgroundColor = .clear
+            descriptionB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
+            referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             referencesB.backgroundColor = .clear
         }
     }
