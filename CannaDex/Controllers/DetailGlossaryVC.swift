@@ -22,7 +22,26 @@ class DetailGlossaryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        contentView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+    
+    private func showView(button:String) {
+        if button == "de"{
+            descriptionB.layer.cornerRadius = 12.0
+            descriptionB.backgroundColor = .green
+            referencesB.backgroundColor = .clear
+            dateB.backgroundColor = .clear
+        }else if button == "re" {
+            referencesB.layer.cornerRadius = 12.0
+            referencesB.backgroundColor = .green
+            descriptionB.backgroundColor = .clear
+            dateB.backgroundColor = .clear
+        }else if button == "da" {
+            dateB.layer.cornerRadius = 12.0
+            dateB.backgroundColor = .green
+            descriptionB.backgroundColor = .clear
+            referencesB.backgroundColor = .clear
+        }
     }
 
     @IBAction func favoriteB(_ sender: Any) {
