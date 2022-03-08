@@ -32,6 +32,11 @@ class DetailGlossaryVC: UIViewController {
         descriptionB.titleLabel?.textColor = UIColor.white
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     private func setupDesign(){
         secondaryView.layer.cornerRadius = 20
         secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
