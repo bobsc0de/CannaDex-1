@@ -48,16 +48,20 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         cell.filterName.text = dataSource[indexPath.row].name
         
         let saved = UserDefaults.standard.stringArray(forKey: "filter")
-        //print(saved,"sami")
+        print(saved,"sami")
         if saved == nil {
             
         }else {
             if saved!.contains(where: {$0 == self.dataSource[indexPath.row].name}) {
                // it exists, do something
-                cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+                print("Exist")
+                cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                self.dataSource[indexPath.row].check = true
             } else {
                //item could not be found
+                print("Hello")
                 cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                self.dataSource[indexPath.row].check = false
             }
         }
         
@@ -88,6 +92,10 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(UserDefaults.standard.stringArray(forKey: "filter"))
+    }
+    
     private func saveFavorite(id:String) {
         var savedFormer = UserDefaults.standard.stringArray(forKey: "filter")
         var saved = [String]()
@@ -102,6 +110,8 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
                 UserDefaults.standard.setValue(savedFormer, forKey: "filter")
             }
         }
+        print(saved)
+        print(savedFormer)
     }
     
     private func removeFavorite(id:String) {
@@ -109,6 +119,7 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         if saved == nil {
             
         }else {
+            print(saved)
             for i in 0..<saved!.count {
                 if saved![i] == id {
                     saved?.remove(at: i)

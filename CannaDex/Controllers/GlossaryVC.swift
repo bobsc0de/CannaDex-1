@@ -26,10 +26,11 @@ class GlossaryVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.tableView.reloadData()
-        print(dataSource)
+        
+        
         setupData()
         tableView.reloadData()
+        filterData()
     }
     
     private func setupData(){
@@ -44,6 +45,31 @@ class GlossaryVC: UIViewController {
             }else if saved!.contains(where: {$0 == "1"}) {
                 self.dataSource[0].favorite = true
             }
+        }
+    }
+    
+    private func filterData(){
+        let filter = UserDefaults.standard.stringArray(forKey: "filter")
+        var data2 = [Glossary]()
+        var dataSourceAg = [Glossary]()
+        dataSourceAg = SetupData.getGlossaryData()
+        if filter?.count == 0 || filter == nil {
+            dataSource = dataSourceAg
+            print(dataSource)
+            tableView.reloadData()
+        }else {
+            for i in 0..<filter!.count {
+                if dataSourceAg.contains(where: {$0.category == filter![i]}) {
+                   // it exists, do something
+                    data2.append(dataSourceAg[i])
+                } else {
+                   //item could not be found
+                }
+            }
+            print(data2)
+            dataSource.removeAll()
+            dataSource = data2
+            tableView.reloadData()
         }
     }
     
