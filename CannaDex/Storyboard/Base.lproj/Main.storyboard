@@ -608,10 +608,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IHN-Xz-gap">
-                                                        <rect key="frame" x="20" y="237" width="374" height="35"/>
+                                                        <rect key="frame" x="10" y="237" width="394" height="35"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHc-Fo-Fu5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="35"/>
                                                                 <color key="backgroundColor" red="0.39215683940000001" green="0.76862752440000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Description">
@@ -623,7 +623,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiQ-4I-Ggv">
-                                                                <rect key="frame" x="131.5" y="0.0" width="111" height="35"/>
+                                                                <rect key="frame" x="138" y="0.0" width="118" height="35"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Date">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -634,7 +634,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-dK-LbG">
-                                                                <rect key="frame" x="262.5" y="0.0" width="111.5" height="35"/>
+                                                                <rect key="frame" x="276" y="0.0" width="118" height="35"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="References">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -662,7 +662,7 @@
                                                 <constraints>
                                                     <constraint firstItem="IHN-Xz-gap" firstAttribute="top" secondItem="r7y-Wn-apo" secondAttribute="bottom" constant="30" id="2zw-hw-hk4"/>
                                                     <constraint firstItem="fbh-nu-NPs" firstAttribute="leading" secondItem="OoV-ZR-op7" secondAttribute="leading" constant="30" id="51U-9B-dyI"/>
-                                                    <constraint firstAttribute="trailing" secondItem="IHN-Xz-gap" secondAttribute="trailing" constant="20" id="7sD-my-lvd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IHN-Xz-gap" secondAttribute="trailing" constant="10" id="7sD-my-lvd"/>
                                                     <constraint firstItem="fbh-nu-NPs" firstAttribute="top" secondItem="IHN-Xz-gap" secondAttribute="bottom" constant="15" id="8gD-Lg-dkv"/>
                                                     <constraint firstAttribute="bottom" secondItem="fbh-nu-NPs" secondAttribute="bottom" constant="15" id="ASD-NV-Jks"/>
                                                     <constraint firstItem="3Tr-Ux-3Qq" firstAttribute="centerX" secondItem="OoV-ZR-op7" secondAttribute="centerX" constant="-50" id="BDx-t5-oyw"/>
@@ -672,7 +672,7 @@
                                                     <constraint firstItem="r7y-Wn-apo" firstAttribute="centerX" secondItem="OoV-ZR-op7" secondAttribute="centerX" id="aQ7-6t-wdI"/>
                                                     <constraint firstItem="r7y-Wn-apo" firstAttribute="top" secondItem="3Tr-Ux-3Qq" secondAttribute="bottom" constant="30" id="b4b-bO-wkR"/>
                                                     <constraint firstAttribute="trailing" secondItem="fbh-nu-NPs" secondAttribute="trailing" constant="30" id="dJD-JV-5JG"/>
-                                                    <constraint firstItem="IHN-Xz-gap" firstAttribute="leading" secondItem="OoV-ZR-op7" secondAttribute="leading" constant="20" id="euf-1Y-l5o"/>
+                                                    <constraint firstItem="IHN-Xz-gap" firstAttribute="leading" secondItem="OoV-ZR-op7" secondAttribute="leading" constant="10" id="euf-1Y-l5o"/>
                                                     <constraint firstItem="3Tr-Ux-3Qq" firstAttribute="top" secondItem="mu3-OI-j3y" secondAttribute="bottom" constant="70" id="kNl-H7-V3C"/>
                                                     <constraint firstItem="xAN-ai-E1w" firstAttribute="leading" secondItem="3Tr-Ux-3Qq" secondAttribute="trailing" constant="15" id="s90-T4-yjf"/>
                                                     <constraint firstAttribute="height" constant="500" id="xAR-GF-5P2"/>
