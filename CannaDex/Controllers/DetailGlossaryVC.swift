@@ -18,11 +18,16 @@ class DetailGlossaryVC: UIViewController {
     @IBOutlet weak var dateB: UIButton!
     @IBOutlet weak var referencesB: UIButton!
     @IBOutlet weak var textT: UITextView!
+    @IBOutlet weak var secondaryView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contentView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        setupDesign()
+    }
+    
+    private func setupDesign(){
+        secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     private func showView(button:String) {
@@ -50,13 +55,16 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func descriptionB(_ sender: Any) {
         showView(button: "de")
+        textT.text = "Descri"
     }
     
     @IBAction func referencesB(_ sender: Any) {
         showView(button: "re")
+        textT.text = "REfere"
     }
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
+        textT.text = "Date"
     }
 }
