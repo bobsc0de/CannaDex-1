@@ -116,13 +116,10 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
                 if index.favorite {
                     cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
                     self.dataSource[indexPath.row].favorite = false
-    //                index.favorite = false
-    //                self.tableView.reloadData()
                     self.removeFavorite(id: String(indexPath.row + 1))
                 }else {
                     cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                     self.dataSource[indexPath.row].favorite = true
-                    //index.favorite = true
                     self.saveFavorite(id: String(indexPath.row + 1))
                 }
             }else {

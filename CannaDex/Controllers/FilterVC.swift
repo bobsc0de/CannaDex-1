@@ -48,12 +48,67 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         cell.filterName.text = dataSource[indexPath.row].name
         
         cell.check = {
-            if dataSource[indexPath.row].check {
+            
+            let saved = UserDefaults.standard.stringArray(forKey: "filter")
+            if saved == nil {
+                if self.dataSource[indexPath.row].check {
+                    cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                    self.dataSource[indexPath.row].check = false
+                    self.removeFavorite(id: self.dataSource[indexPath.row].name)
+                }else {
+                    cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+                    self.dataSource[indexPath.row].check = true
+                    self.saveFavorite(id: self.dataSource[indexPath.row].name)
+                }
+            }else {
+                if saved!.contains(where: {$0 == self.dataSource[indexPath.row].name}) {
+                    cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                    self.dataSource[indexPath.row].check = false
+                    self.removeFavorite(id: self.dataSource[indexPath.row].name)
+                }else {
+                    cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+                    self.dataSource[indexPath.row].check = true
+                    self.saveFavorite(id: self.dataSource[indexPath.row].name)
+                }
+            }
+            
+//            if self.dataSource[indexPath.row].check {
+//                cell.checkBoxB.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+//
+//            }else {
+//                cell.checkBoxB.setImage(UIImage(named: "checkmark.square.fill"), for: .normal)
+//            }
+        }
+        return cell
+    }
+    
+    private func saveFavorite(id:String) {
+        var savedFormer = UserDefaults.standard.stringArray(forKey: "filter")
+        var saved = [String]()
+        if savedFormer == nil {
+            saved.append(id)
+            UserDefaults.standard.setValue(saved, forKey: "filter")
+        }else {
+            if savedFormer!.contains(where: {$0 == id}) {
                 
+            }else {
+                savedFormer?.append(id)
+                UserDefaults.standard.setValue(savedFormer, forKey: "filter")
             }
         }
-        
-        
-        return cell
+    }
+    
+    private func removeFavorite(id:String) {
+        var saved = UserDefaults.standard.stringArray(forKey: "filter")
+        if saved == nil {
+            
+        }else {
+            for i in 0..<saved!.count {
+                if saved![i] == id {
+                    saved?.remove(at: i)
+                }
+            }
+            UserDefaults.standard.setValue(saved, forKey: "filter")
+        }
     }
 }

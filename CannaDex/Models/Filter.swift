@@ -9,5 +9,5 @@ import Foundation
 
 struct Filter {
     let name:String
-    let check:Bool
+    var check:Bool
 }
