@@ -127,8 +127,14 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
                     self.saveFavorite(id: String(indexPath.row + 1))
                 }
             }else {
-                if saved!.contains(where: {$0 == id}) {
-                    
+                if saved!.contains(where: {$0 == "\(indexPath.row + 1)"}) {
+                    cell.favoriteB.setImage(UIImage(systemName: "heart"), for: .normal)
+                    self.dataSource[indexPath.row].favorite = false
+                    self.removeFavorite(id: String(indexPath.row + 1))
+                }else {
+                    cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    self.dataSource[indexPath.row].favorite = true
+                    self.saveFavorite(id: String(indexPath.row + 1))
                 }
             }
             
@@ -137,7 +143,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(UserDefaults.standard.stringArray(forKey: "saved"))
+        print(UserDefaults.standard.stringArray(forKey: "saved")) as Any
     }
     
     
@@ -155,8 +161,8 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
                 UserDefaults.standard.setValue(savedFormer, forKey: "saved")
             }
         }
-        print(saved,"Saved")
-        print(savedFormer,"savedFormer")
+//        print(saved,"Saved")
+//        print(savedFormer,"savedFormer")
         
     }
     
