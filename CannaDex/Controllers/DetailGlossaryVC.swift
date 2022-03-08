@@ -130,28 +130,22 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        /print("hll")
         print(scrollView.contentOffset.y)
         if scrollView.contentOffset.y > 60 {
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseOut, animations: {
                 self.imgI.alpha = 0
             }, completion: nil)
         }
         
         if scrollView.contentOffset.y < 55 {
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseIn, animations: {
                 self.imgI.alpha = 1
             }, completion: nil)
         }
         
-        if scrollView.contentOffset.y > 96 {
+        if scrollView.contentOffset.y > 85 {
             scrollView.isScrollEnabled = false
         }
-        
-        if scrollView.contentOffset.y < 90 {
-            scrollView.isScrollEnabled = true
-        }
-        
     }
     
 }
