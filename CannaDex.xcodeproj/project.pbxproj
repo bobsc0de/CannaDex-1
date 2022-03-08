@@ -22,6 +22,7 @@
 		2340A8E427D6234C0007020D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E327D6234C0007020D /* Filter.swift */; };
 		2340A8E627D6270D0007020D /* Glossary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E527D6270D0007020D /* Glossary.swift */; };
 		2340A8E827D63AE30007020D /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E727D63AE30007020D /* FavoriteVC.swift */; };
+		2340A8EA27D761920007020D /* DetailGlossaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E927D761920007020D /* DetailGlossaryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2340A8E327D6234C0007020D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		2340A8E527D6270D0007020D /* Glossary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glossary.swift; sourceTree = "<group>"; };
 		2340A8E727D63AE30007020D /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		2340A8E927D761920007020D /* DetailGlossaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGlossaryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				2340A8D927D61D1B0007020D /* GlossaryVC.swift */,
 				2340A8DF27D620ED0007020D /* FilterVC.swift */,
 				2340A8E727D63AE30007020D /* FavoriteVC.swift */,
+				2340A8E927D761920007020D /* DetailGlossaryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */,
 				2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */,
 				2340A8E227D6222D0007020D /* SetupData.swift in Sources */,
+				2340A8EA27D761920007020D /* DetailGlossaryVC.swift in Sources */,
 				2340A8E627D6270D0007020D /* Glossary.swift in Sources */,
 				2340A8BD27D60C450007020D /* AppDelegate.swift in Sources */,
 				2340A8BF27D60C450007020D /* SceneDelegate.swift in Sources */,
