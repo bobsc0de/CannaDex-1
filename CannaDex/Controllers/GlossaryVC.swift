@@ -95,7 +95,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         }
         
         let saved = UserDefaults.standard.stringArray(forKey: "saved")
-        print(saved,"sami")
+        //print(saved,"sami")
         if saved == nil {
             
         }else {
@@ -123,7 +123,6 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
                     cell.favoriteB.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                     self.dataSource[indexPath.row].favorite = true
                     //index.favorite = true
-                    print("In CLick ",UserDefaults.standard.stringArray(forKey: "saved"))
                     self.saveFavorite(id: String(indexPath.row + 1))
                 }
             }else {
@@ -143,7 +142,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(UserDefaults.standard.stringArray(forKey: "saved")) as Any
+        //print(UserDefaults.standard.stringArray(forKey: "saved") as Any) as Any
     }
     
     
