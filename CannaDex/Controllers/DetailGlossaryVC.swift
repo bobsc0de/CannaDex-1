@@ -18,10 +18,13 @@ class DetailGlossaryVC: UIViewController {
     @IBOutlet weak var dateB: UIButton!
     @IBOutlet weak var referencesB: UIButton!
     @IBOutlet weak var secondaryView: UIView!
-    
+    @IBOutlet weak var titleCodeL: UILabel!
+    @IBOutlet weak var backB: UIButton!
+    @IBOutlet weak var favoriteB: UIButton!
     @IBOutlet weak var descriptionV: UIView!
     @IBOutlet weak var descriptionTextT: UITextView!
-    
+    @IBOutlet weak var scrollViewNested: UIScrollView!
+    @IBOutlet weak var scrollViewNestedContentView: UIView!
     // Date Views
     @IBOutlet weak var dateV: UIView!
     @IBOutlet weak var date11L: UILabel!
@@ -85,6 +88,8 @@ class DetailGlossaryVC: UIViewController {
         referencesB.backgroundColor = .clear
         dateB.backgroundColor = .clear
         descriptionB.titleLabel?.textColor = UIColor.white
+        dateV.isHidden = true
+        descriptionV.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +101,17 @@ class DetailGlossaryVC: UIViewController {
         secondaryView.layer.cornerRadius = 40
         //secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner] for bottom radius
         secondaryView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // for top radius
+        date11L.layer.cornerRadius = 12.0
+        backB.layer.cornerRadius = backB.frame.height / 2
         
+    }
+    
+    @IBAction func favoriteB(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backB(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func showView(button:String) {
@@ -138,6 +153,8 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
+        dateV.isHidden = false
+        descriptionV.isHidden = true
     }
     
     private func setupGesture(){
