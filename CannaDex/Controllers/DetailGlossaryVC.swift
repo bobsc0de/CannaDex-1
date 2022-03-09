@@ -103,6 +103,27 @@ class DetailGlossaryVC: UIViewController {
         secondaryView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // for top radius
         date11L.layer.cornerRadius = 12.0
         date11L.layer.masksToBounds = true
+        date12L.layer.cornerRadius = 12.0
+        date12L.layer.masksToBounds = true
+        date13L.layer.cornerRadius = 12.0
+        date13L.layer.masksToBounds = true
+        date14L.layer.cornerRadius = 12.0
+        date14L.layer.masksToBounds = true
+        
+        date11ValueL.layer.cornerRadius = 12.0
+        date11ValueL.layer.masksToBounds = true
+        date12ValueL.layer.cornerRadius = 12.0
+        date12ValueL.layer.masksToBounds = true
+        date13ValueL.layer.cornerRadius = 12.0
+        date13ValueL.layer.masksToBounds = true
+        date13AgainValueL.layer.cornerRadius = 12.0
+        date13AgainValueL.layer.masksToBounds = true
+        date14ValueL.layer.cornerRadius = 12.0
+        date14ValueL.layer.masksToBounds = true
+        date14AgainValueL.layer.cornerRadius = 12.0
+        date14AgainValueL.layer.masksToBounds = true
+        
+        
         backB.layer.cornerRadius = backB.frame.height / 2
         categL.layer.cornerRadius = categL.frame.height / 2
         categL.layer.masksToBounds = true
