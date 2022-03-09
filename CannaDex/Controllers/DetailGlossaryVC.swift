@@ -29,16 +29,18 @@ class DetailGlossaryVC: UIViewController {
         
         setupDesign()
         showView(button: "de")
-        //textT.text = "Descri"
+        setupData()
+        setupScrollView()
+        
+    }
+    
+    private func setupData(){
         descriptionB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         referencesB.backgroundColor = .clear
         dateB.backgroundColor = .clear
         descriptionB.titleLabel?.textColor = UIColor.white
-        //setupGesture()
-        setupScrollView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,13 +94,10 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func referencesB(_ sender: Any) {
         showView(button: "re")
-        //textT.text = "REfere"
     }
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
-        //textT.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
-        //dateB.setTitleColor(UIColor.white, for: .normal)
     }
     
     private func setupGesture(){
