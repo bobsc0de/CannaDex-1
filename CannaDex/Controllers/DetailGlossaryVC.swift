@@ -122,6 +122,21 @@ class DetailGlossaryVC: UIViewController {
         date14ValueL.layer.masksToBounds = true
         date14AgainValueL.layer.cornerRadius = 12.0
         date14AgainValueL.layer.masksToBounds = true
+        date15T.layer.cornerRadius = 12.0
+        
+        date16L.layer.cornerRadius = 12.0
+        date16L.layer.masksToBounds = true
+        
+        date16ValueL.layer.cornerRadius = 12.0
+        date16ValueL.layer.masksToBounds = true
+        date16AgainValueL.layer.cornerRadius = 12.0
+        date16AgainValueL.layer.masksToBounds = true
+        date16Again2ValueL.layer.cornerRadius = 12.0
+        date16Again2ValueL.layer.masksToBounds = true
+        date16Again3ValueL.layer.cornerRadius = 12.0
+        date16Again3ValueL.layer.masksToBounds = true
+        
+        date17T.layer.cornerRadius = 12.0
         
         
         backB.layer.cornerRadius = backB.frame.height / 2
