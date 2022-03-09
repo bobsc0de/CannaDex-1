@@ -225,8 +225,8 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
         if scrollView == self.scrollView {
+            print("Scroll ",scrollView.contentOffset.y)
             if scrollView.contentOffset.y > 60 {
                 UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseOut, animations: {
                     self.imgI.alpha = 0
@@ -243,6 +243,10 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
                 scrollView.contentOffset.y = 85
     //            scrollView.isScrollEnabled = false
             }
+        }
+        
+        if scrollView == self.scrollViewNested {
+            print("Nested ",scrollView.contentOffset.y)
         }
     }
     
