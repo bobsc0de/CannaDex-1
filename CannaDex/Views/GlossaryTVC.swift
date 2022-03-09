@@ -18,6 +18,8 @@ class GlossaryTVC: UITableViewCell {
     @IBOutlet weak var favoriteB: UIButton!
     @IBOutlet weak var categI: UIImageView!
     @IBOutlet weak var backgroundI: UIImageView!
+    @IBOutlet weak var backgroundV: UIView!
+    
     
     var favorite : (() -> Void)? = nil
     
