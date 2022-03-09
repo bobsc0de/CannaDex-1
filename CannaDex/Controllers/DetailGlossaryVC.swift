@@ -68,7 +68,7 @@ class DetailGlossaryVC: UIViewController {
     
     
     
-    
+    var backgroundColor:UIColor?
     var startingPointForView = 0
     
     override func viewDidLoad() {

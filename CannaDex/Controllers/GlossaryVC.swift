@@ -166,9 +166,9 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(UserDefaults.standard.stringArray(forKey: "saved") as Any) as Any
         let controller = storyboard?.instantiateViewController(withIdentifier: "DetailGlossaryVC") as! DetailGlossaryVC
         controller.modalPresentationStyle = .fullScreen
+        controller.backgroundColor = dataSource[indexPath.row].
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
