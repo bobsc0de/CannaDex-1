@@ -142,7 +142,8 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
         }
         
         if scrollView.contentOffset.y > 85 {
-            scrollView.isScrollEnabled = false
+            scrollView.contentOffset.y = 85
+//            scrollView.isScrollEnabled = false
         }
     }
     
