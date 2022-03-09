@@ -27,7 +27,8 @@ class GlossaryVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        print("ViewWillAppear")
+        self.navigationController?.navigationBar.isHidden = false
         setupData()
         tableView.reloadData()
         filterData()
