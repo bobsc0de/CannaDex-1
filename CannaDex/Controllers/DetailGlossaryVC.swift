@@ -78,6 +78,7 @@ class DetailGlossaryVC: UIViewController {
         showView(button: "de")
         setupData()
         setupScrollView()
+        scrollViewNested.isScrollEnabled = false
         
     }
     
@@ -186,6 +187,7 @@ class DetailGlossaryVC: UIViewController {
         //textT.text = "Descri"
         dateV.isHidden = true
         descriptionV.isHidden = false
+        scrollViewNested.contentOffset.y = 0
     }
     
     @IBAction func referencesB(_ sender: Any) {
@@ -194,6 +196,7 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
+        scrollViewNested.contentOffset.y = 0
         dateV.isHidden = false
         descriptionV.isHidden = true
     }
@@ -227,6 +230,7 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             print("Scroll ",scrollView.contentOffset.y)
+            
             if scrollView.contentOffset.y > 60 {
                 UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseOut, animations: {
                     self.imgI.alpha = 0
@@ -241,13 +245,11 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
             
             if scrollView.contentOffset.y > 85 {
                 scrollView.contentOffset.y = 85
-    //            scrollView.isScrollEnabled = false
+                scrollViewNested.isScrollEnabled = true
             }
         }
         
-        if scrollView == self.scrollViewNested {
-            print("Nested ",scrollView.contentOffset.y)
-        }
+        
     }
     
 }
