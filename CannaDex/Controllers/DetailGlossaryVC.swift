@@ -36,7 +36,7 @@ class DetailGlossaryVC: UIViewController {
         referencesB.backgroundColor = .clear
         dateB.backgroundColor = .clear
         descriptionB.titleLabel?.textColor = UIColor.white
-        setupGesture()
+        //setupGesture()
         setupScrollView()
         
     }
