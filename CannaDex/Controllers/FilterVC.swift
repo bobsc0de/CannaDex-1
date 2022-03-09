@@ -93,7 +93,7 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(UserDefaults.standard.stringArray(forKey: "filter"))
+        //print(UserDefaults.standard.stringArray(forKey: "filter"))
     }
     
     private func saveFavorite(id:String) {
@@ -110,8 +110,6 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
                 UserDefaults.standard.setValue(savedFormer, forKey: "filter")
             }
         }
-        print(saved)
-        print(savedFormer)
     }
     
     private func removeFavorite(id:String) {
