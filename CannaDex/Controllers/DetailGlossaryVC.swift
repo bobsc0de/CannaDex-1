@@ -25,6 +25,7 @@ class DetailGlossaryVC: UIViewController {
     @IBOutlet weak var descriptionTextT: UITextView!
     @IBOutlet weak var scrollViewNested: UIScrollView!
     @IBOutlet weak var scrollViewNestedContentView: UIView!
+    @IBOutlet weak var backgroundImg: UIImageView!
     // Date Views
     @IBOutlet weak var dateV: UIView!
     @IBOutlet weak var date11L: UILabel!
@@ -58,17 +59,6 @@ class DetailGlossaryVC: UIViewController {
     
     // End
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    var backgroundColor:UIColor?
     var startingPointForView = 0
     
     override func viewDidLoad() {

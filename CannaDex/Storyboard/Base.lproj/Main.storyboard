@@ -556,6 +556,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5v-cS-Ywy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-jT-goU">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <subviews>
@@ -996,18 +999,23 @@
                         <color key="backgroundColor" red="0.34117650989999998" green="0.35686278339999999" blue="0.71764707569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gMh-z9-Fs9" firstAttribute="trailing" secondItem="UGP-jT-goU" secondAttribute="trailing" id="1sP-rF-gL9"/>
+                            <constraint firstItem="X5v-cS-Ywy" firstAttribute="top" secondItem="FpL-Bi-GY5" secondAttribute="top" id="2fd-5h-ib7"/>
+                            <constraint firstItem="X5v-cS-Ywy" firstAttribute="leading" secondItem="gMh-z9-Fs9" secondAttribute="leading" id="6bh-nS-CcA"/>
                             <constraint firstItem="1Cr-fY-5mb" firstAttribute="leading" secondItem="gMh-z9-Fs9" secondAttribute="leading" id="86B-Jd-Db5"/>
                             <constraint firstItem="UGP-jT-goU" firstAttribute="top" secondItem="1Cr-fY-5mb" secondAttribute="bottom" id="HgV-Mt-4Aa"/>
                             <constraint firstItem="gMh-z9-Fs9" firstAttribute="bottom" secondItem="UGP-jT-goU" secondAttribute="bottom" id="ImL-nR-LEK"/>
                             <constraint firstItem="gMh-z9-Fs9" firstAttribute="trailing" secondItem="1Cr-fY-5mb" secondAttribute="trailing" id="QMx-e8-bWU"/>
                             <constraint firstItem="1Cr-fY-5mb" firstAttribute="top" secondItem="gMh-z9-Fs9" secondAttribute="top" id="SQR-UC-Ydb"/>
                             <constraint firstItem="jfb-LC-S3q" firstAttribute="width" secondItem="FpL-Bi-GY5" secondAttribute="width" id="Yfx-O6-irj"/>
+                            <constraint firstItem="gMh-z9-Fs9" firstAttribute="trailing" secondItem="X5v-cS-Ywy" secondAttribute="trailing" id="ZdO-F0-4mq"/>
                             <constraint firstItem="IgE-jM-8Wd" firstAttribute="width" secondItem="FpL-Bi-GY5" secondAttribute="width" id="f3N-he-6gl"/>
                             <constraint firstItem="UGP-jT-goU" firstAttribute="leading" secondItem="gMh-z9-Fs9" secondAttribute="leading" id="nh8-Tq-Ern"/>
+                            <constraint firstAttribute="bottom" secondItem="X5v-cS-Ywy" secondAttribute="bottom" id="zoB-CZ-ZAC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backB" destination="WjV-fI-dmO" id="Aq5-sI-99W"/>
+                        <outlet property="backgroundImg" destination="X5v-cS-Ywy" id="a5Q-9s-gZG"/>
                         <outlet property="categL" destination="r7y-Wn-apo" id="f3m-2s-eJh"/>
                         <outlet property="contentView" destination="IgE-jM-8Wd" id="jOP-ny-G5Z"/>
                         <outlet property="date11L" destination="kZc-CJ-8e2" id="dht-gk-sry"/>
