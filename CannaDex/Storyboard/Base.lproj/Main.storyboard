@@ -923,7 +923,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.34117650989999998" green="0.35686278339999999" blue="0.71764707569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="OoV-ZR-op7" secondAttribute="trailing" id="6IL-9y-TMl"/>
                                             <constraint firstAttribute="height" constant="820" id="U2j-pG-93G"/>
@@ -996,7 +996,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gMh-z9-Fs9"/>
-                        <color key="backgroundColor" red="0.34117650989999998" green="0.35686278339999999" blue="0.71764707569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gMh-z9-Fs9" firstAttribute="trailing" secondItem="UGP-jT-goU" secondAttribute="trailing" id="1sP-rF-gL9"/>
                             <constraint firstItem="X5v-cS-Ywy" firstAttribute="top" secondItem="FpL-Bi-GY5" secondAttribute="top" id="2fd-5h-ib7"/>
