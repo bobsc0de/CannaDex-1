@@ -59,6 +59,7 @@ class DetailGlossaryVC: UIViewController {
     
     // End
     
+    var imgString:String?
     var startingPointForView = 0
     
     override func viewDidLoad() {
@@ -69,6 +70,8 @@ class DetailGlossaryVC: UIViewController {
         setupData()
         setupScrollView()
         scrollViewNested.isScrollEnabled = false
+        
+        backgroundImg.image = UIImage(named: "\(imgString ?? "")_bg")
         
     }
     
