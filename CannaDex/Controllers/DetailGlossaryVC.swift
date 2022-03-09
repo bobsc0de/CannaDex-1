@@ -102,7 +102,10 @@ class DetailGlossaryVC: UIViewController {
         //secondaryView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner] for bottom radius
         secondaryView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // for top radius
         date11L.layer.cornerRadius = 12.0
+        date11L.layer.masksToBounds = true
         backB.layer.cornerRadius = backB.frame.height / 2
+        categL.layer.cornerRadius = categL.frame.height / 2
+        categL.layer.masksToBounds = true
         
     }
     
@@ -145,6 +148,8 @@ class DetailGlossaryVC: UIViewController {
     @IBAction func descriptionB(_ sender: Any) {
         showView(button: "de")
         //textT.text = "Descri"
+        dateV.isHidden = true
+        descriptionV.isHidden = false
     }
     
     @IBAction func referencesB(_ sender: Any) {
