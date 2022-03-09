@@ -24,6 +24,8 @@
 		2340A8E827D63AE30007020D /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E727D63AE30007020D /* FavoriteVC.swift */; };
 		2340A8EA27D761920007020D /* DetailGlossaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340A8E927D761920007020D /* DetailGlossaryVC.swift */; };
 		2340A8ED27D770E90007020D /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 2340A8EC27D770E90007020D /* Cosmos */; };
+		23D2D9CA27D8CBB500A9D8DF /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 23D2D9C927D8CBB500A9D8DF /* Hero */; };
+		23D2D9CC27D8CD4D00A9D8DF /* HeroHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2D9CB27D8CD4D00A9D8DF /* HeroHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		2340A8E527D6270D0007020D /* Glossary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glossary.swift; sourceTree = "<group>"; };
 		2340A8E727D63AE30007020D /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		2340A8E927D761920007020D /* DetailGlossaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGlossaryVC.swift; sourceTree = "<group>"; };
+		23D2D9CB27D8CD4D00A9D8DF /* HeroHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D2D9CA27D8CBB500A9D8DF /* Hero in Frameworks */,
 				2340A8ED27D770E90007020D /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +145,7 @@
 		2340A8D527D60C5C0007020D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				23D2D9CB27D8CD4D00A9D8DF /* HeroHelper.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			name = CannaDex;
 			packageProductDependencies = (
 				2340A8EC27D770E90007020D /* Cosmos */,
+				23D2D9C927D8CBB500A9D8DF /* Hero */,
 			);
 			productName = CannaDex;
 			productReference = 2340A8B927D60C450007020D /* CannaDex.app */;
@@ -204,6 +210,7 @@
 			mainGroup = 2340A8B027D60C450007020D;
 			packageReferences = (
 				2340A8EB27D770E90007020D /* XCRemoteSwiftPackageReference "Cosmos" */,
+				23D2D9C827D8CBB500A9D8DF /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = 2340A8BA27D60C450007020D /* Products */;
 			projectDirPath = "";
@@ -239,6 +246,7 @@
 				2340A8E827D63AE30007020D /* FavoriteVC.swift in Sources */,
 				2340A8DA27D61D1C0007020D /* GlossaryVC.swift in Sources */,
 				2340A8D827D6128C0007020D /* Top10CVC.swift in Sources */,
+				23D2D9CC27D8CD4D00A9D8DF /* HeroHelper.swift in Sources */,
 				2340A8E227D6222D0007020D /* SetupData.swift in Sources */,
 				2340A8EA27D761920007020D /* DetailGlossaryVC.swift in Sources */,
 				2340A8E627D6270D0007020D /* Glossary.swift in Sources */,
@@ -474,6 +482,14 @@
 				kind = branch;
 			};
 		};
+		23D2D9C827D8CBB500A9D8DF /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -481,6 +497,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2340A8EB27D770E90007020D /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		23D2D9C927D8CBB500A9D8DF /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23D2D9C827D8CBB500A9D8DF /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class GlossaryVC: UIViewController {
 
@@ -31,6 +32,12 @@ class GlossaryVC: UIViewController {
         setupData()
         tableView.reloadData()
         filterData()
+        enableHero()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        disableHero()
     }
     
     private func setupData(){
@@ -166,10 +173,14 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GlossaryTVC") as! GlossaryTVC
         let controller = storyboard?.instantiateViewController(withIdentifier: "DetailGlossaryVC") as! DetailGlossaryVC
         controller.modalPresentationStyle = .fullScreen
         controller.imgString = dataSource[indexPath.row].categImage
-        self.navigationController?.pushViewController(controller, animated: true)
+        cell.categI.heroID = "imageView"
+        controller.imgI.heroID = "imageView"
+        showHero(controller)
+        //self.navigationController?.pushViewController(controller, animated: true)
     }
     
     
