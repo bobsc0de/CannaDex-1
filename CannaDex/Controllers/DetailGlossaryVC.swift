@@ -51,13 +51,6 @@ class DetailGlossaryVC: UIViewController {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     // End
     
     var imgString:String?

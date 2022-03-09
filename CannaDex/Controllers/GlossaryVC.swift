@@ -178,7 +178,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         controller.modalPresentationStyle = .fullScreen
         controller.imgString = dataSource[indexPath.row].categImage
         cell.categI.heroID = "imageView"
-        //controller.imgI.heroID = "imageView"
+        controller.imgI.heroID = "imageView"
         showHero(controller)
     }
     
