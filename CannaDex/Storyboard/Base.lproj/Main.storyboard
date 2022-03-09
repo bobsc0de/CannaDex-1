@@ -589,6 +589,9 @@
                                                             <constraint firstAttribute="width" constant="140" id="4n2-jG-tVf"/>
                                                             <constraint firstAttribute="height" constant="140" id="JTG-9j-zHc"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="imageView"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="White Widow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-Ux-3Qq">
                                                         <rect key="frame" x="40" y="80" width="334" height="45"/>
