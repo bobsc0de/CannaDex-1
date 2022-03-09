@@ -113,7 +113,7 @@ extension GlossaryVC:UITableViewDelegate,UITableViewDataSource {
         cell.categL.layer.cornerRadius = 10.0
         cell.categL.layer.masksToBounds = true
         cell.backgroundV.layer.cornerRadius = 30
-        cell.backgroundV.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        cell.backgroundV.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         
         if cell.favoriteB.imageView?.image == UIImage(systemName: "heart.fill") {
             index.favorite = true

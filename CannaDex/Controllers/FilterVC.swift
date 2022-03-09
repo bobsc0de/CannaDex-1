@@ -119,11 +119,13 @@ extension FilterVC:UITableViewDelegate,UITableViewDataSource {
         if saved == nil {
             
         }else {
-            print(saved)
-            for i in 0..<saved!.count {
-                if saved![i] == id {
-                    saved?.remove(at: i)
-                }
+//            print("In Remove",saved)
+//            print(id)
+//            print(saved?.count)
+            if let index = saved!.firstIndex(of: id) {
+                saved!.remove(at: index)
+            } else {
+                // not found
             }
             UserDefaults.standard.setValue(saved, forKey: "filter")
         }
