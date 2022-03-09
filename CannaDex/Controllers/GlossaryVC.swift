@@ -21,7 +21,6 @@ class GlossaryVC: UIViewController {
         setupTableView()
         setupGesture()
         dataSource = SetupData.getGlossaryData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
