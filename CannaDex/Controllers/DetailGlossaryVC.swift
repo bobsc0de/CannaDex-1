@@ -29,7 +29,7 @@ class DetailGlossaryVC: UIViewController {
         
         setupDesign()
         showView(button: "de")
-        textT.text = "Descri"
+        //textT.text = "Descri"
         descriptionB.backgroundColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         dateB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
         referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
@@ -87,17 +87,17 @@ class DetailGlossaryVC: UIViewController {
     
     @IBAction func descriptionB(_ sender: Any) {
         showView(button: "de")
-        textT.text = "Descri"
+        //textT.text = "Descri"
     }
     
     @IBAction func referencesB(_ sender: Any) {
         showView(button: "re")
-        textT.text = "REfere"
+        //textT.text = "REfere"
     }
     
     @IBAction func dateB(_ sender: Any) {
         showView(button: "da")
-        textT.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        //textT.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
         //dateB.setTitleColor(UIColor.white, for: .normal)
     }
     
@@ -129,21 +129,23 @@ extension DetailGlossaryVC:UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
-        if scrollView.contentOffset.y > 60 {
-            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseOut, animations: {
-                self.imgI.alpha = 0
-            }, completion: nil)
-        }
-        
-        if scrollView.contentOffset.y < 55 {
-            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseIn, animations: {
-                self.imgI.alpha = 1
-            }, completion: nil)
-        }
-        
-        if scrollView.contentOffset.y > 85 {
-            scrollView.contentOffset.y = 85
-//            scrollView.isScrollEnabled = false
+        if scrollView == self.scrollView {
+            if scrollView.contentOffset.y > 60 {
+                UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseOut, animations: {
+                    self.imgI.alpha = 0
+                }, completion: nil)
+            }
+            
+            if scrollView.contentOffset.y < 55 {
+                UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseIn, animations: {
+                    self.imgI.alpha = 1
+                }, completion: nil)
+            }
+            
+            if scrollView.contentOffset.y > 85 {
+                scrollView.contentOffset.y = 85
+    //            scrollView.isScrollEnabled = false
+            }
         }
     }
     
