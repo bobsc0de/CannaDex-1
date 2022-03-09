@@ -70,7 +70,6 @@ class DetailGlossaryVC: UIViewController {
         setupData()
         setupScrollView()
         scrollViewNested.isScrollEnabled = false
-        
         backgroundImg.image = UIImage(named: "\(imgString ?? "")_bg")
         
     }
