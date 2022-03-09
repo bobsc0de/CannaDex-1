@@ -14,12 +14,56 @@ class DetailGlossaryVC: UIViewController {
     @IBOutlet weak var imgI: UIImageView!
     @IBOutlet weak var nameL: UILabel!
     @IBOutlet weak var categL: UILabel!
-    @IBOutlet weak var favoriteB: UIButton!
     @IBOutlet weak var descriptionB: UIButton!
     @IBOutlet weak var dateB: UIButton!
     @IBOutlet weak var referencesB: UIButton!
-    @IBOutlet weak var textT: UITextView!
     @IBOutlet weak var secondaryView: UIView!
+    
+    @IBOutlet weak var descriptionV: UIView!
+    @IBOutlet weak var descriptionTextT: UITextView!
+    
+    // Date Views
+    @IBOutlet weak var dateV: UIView!
+    @IBOutlet weak var date11L: UILabel!
+    @IBOutlet weak var date12L: UILabel!
+    @IBOutlet weak var date13L: UILabel!
+    @IBOutlet weak var date14L: UILabel!
+    @IBOutlet weak var date11ValueL: UILabel!
+    @IBOutlet weak var date12ValueL: UILabel!
+    @IBOutlet weak var date13ValueL: UILabel!
+    @IBOutlet weak var date13AgainValueL: UILabel!
+    @IBOutlet weak var date14ValueL: UILabel!
+    @IBOutlet weak var date14AgainValueL: UILabel!
+    @IBOutlet weak var date15T: UITextView!
+    @IBOutlet weak var date16L: UILabel!
+    @IBOutlet weak var date16ValueL: UILabel!
+    @IBOutlet weak var date16AgainValueL: UILabel!
+    @IBOutlet weak var date16Again2ValueL: UILabel!
+    @IBOutlet weak var date16Again3ValueL: UILabel!
+    @IBOutlet weak var date17T: UITextView!
+    // Reference Views
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // End
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     var startingPointForView = 0
@@ -81,10 +125,6 @@ class DetailGlossaryVC: UIViewController {
             referencesB.titleLabel?.textColor = #colorLiteral(red: 0.1961533725, green: 0.7796291709, blue: 0.3441372514, alpha: 1)
             referencesB.backgroundColor = .clear
         }
-    }
-
-    @IBAction func favoriteB(_ sender: Any) {
-        
     }
     
     @IBAction func descriptionB(_ sender: Any) {
